@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
+import 'account_screen.dart';
+import 'foodtour_screen.dart';
 
 class HomeCTPage extends StatefulWidget {
   const HomeCTPage({super.key, required this.title});
@@ -13,7 +16,20 @@ class HomeCTPage extends StatefulWidget {
 class _HomeCTPageState extends State<HomeCTPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
+  List<String> imgGoiy = ["assets/banhmihanoi.jpg", "assets/banhtom.jpg", "assets/banhduc.jpg", "assets/bunthang.jpg", "assets/chaosuon.jpg", "assets/charuoi.jpg", "assets/photai.jpg"];
+  List<String> monanGoiy = ['Bánh Mì Hà Nội', 'Bánh Tôm Hồ Tây', 'Bánh Đúc Hà Nội', 'Bún Thang', 'Cháo sườn', 'Chả rươi', 'Phở bò'];
+  List<double> saoGoiy = [4, 3.5, 3.5, 4.5, 4, 3, 5];
 
+  List<String> imgTruyenthong = ["assets/banhcomhn.jpg", "assets/bunthang.jpg", "assets/bunocnguoi.jpg", "assets/banhmihanoi.jpg",
+  "assets/buncha.jpg", "assets/phoga.jpg", "assets/photai.jpg", "assets/banhduc.jpg"];
+  List<String> monanTruyenthong = ['Bánh cốm Hà Nội', 'Bún thang Hà Nội', 'Bún ốc nguội', 'Bánh mì', 'Bún chả', 'Phở gà', 'Phở bò', 'Bánh đúc'];
+  List<double> saoTruyenthong = [4.5, 4, 3.5, 4.5, 4, 4, 5, 3.5];
+  
+  List<String> imgDuocuathich = ["assets/banhtom.jpg", "assets/bunrielcua.jpg", "assets/kemtrangtien.jpg", "assets/cftrung.jpg", "assets/banhdacua.jpg"];
+  List<String> monanDuocuathic = ['Bánh tôm', 'Bún riêu cua', 'Kem Tràng Tiền', 'Cafe trứng', 'Bánh đa cua'];
+  List<double> saoDuocuathic = [3, 5, 4.5, 2.5, 4];
+
+  List<Widget> tutu = [];
   @override
   void initState() {
     // TODO: implement initState
@@ -79,7 +95,9 @@ class _HomeCTPageState extends State<HomeCTPage> {
                 child: Text("HNFood",
                 style: TextStyle(
                   color: Colors.yellowAccent,
-                  //fontFamily: 'klavika-bold'
+                  fontFamily: 'Schyler',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20
                 ),
                 ),
               ),
@@ -87,10 +105,10 @@ class _HomeCTPageState extends State<HomeCTPage> {
                 margin: EdgeInsets.fromLTRB(0, 0, MediaQuery.of(context).size.height/4, 0),
               ),
               SafeArea(
-                child: IconButton(onPressed: (){
-                  //showSearch(context: context, delegate: SearchFood());
+                child: IconButton(onPressed: () async {
+                  await showSearch(context: context, delegate: SearchFood());
                   //Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage(title: '',)));
-                }, icon: Icon(Icons.search)),
+                }, icon: Icon(Icons.search),color: Colors.yellowAccent,),
               )
             ],
                     ),
@@ -112,13 +130,13 @@ class _HomeCTPageState extends State<HomeCTPage> {
                   ),
                   SizedBox(
                     width: double.infinity,
-                    height: 200,
+                    height: 150,
                     child: ListView.builder(
-                      itemCount: 10,
+                      itemCount: imgGoiy.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (BuildContext context, int index) {
                       return Padding(padding: EdgeInsets.only(left: 10, right: 10),
-                      child: CardList(),
+                      child: CardList(i: saoGoiy[index], img: imgGoiy[index], name: monanGoiy[index],),
                       );
                     },
                     ),
@@ -126,7 +144,7 @@ class _HomeCTPageState extends State<HomeCTPage> {
               ],
             ),
               ),
-              Container(padding: EdgeInsets.all(10),),
+              //Container(padding: EdgeInsets.all(8),),
               Padding(
               padding: EdgeInsets.all(8),
               child: Column(
@@ -134,7 +152,7 @@ class _HomeCTPageState extends State<HomeCTPage> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(bottom: 10),
-                    child: Text("Gợi ý", style: TextStyle(
+                    child: Text("Món ăn truyền thống", style: TextStyle(
                       color: Colors.brown,
                       fontWeight: FontWeight.bold,
                       fontSize: 14
@@ -143,13 +161,43 @@ class _HomeCTPageState extends State<HomeCTPage> {
                     ),
                     SizedBox(
                       width: double.infinity,
-                      height: 200,
+                      height: 150,
                       child: ListView.builder(
-                        itemCount: 10,
+                        itemCount: imgTruyenthong.length,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (BuildContext context, int index) {
                         return Padding(padding: EdgeInsets.only(left: 10, right: 10),
-                        child: CardList(),
+                        child: CardList(i: saoTruyenthong[index], img: imgTruyenthong[index], name: monanTruyenthong[index], ),
+                        );
+                      },
+                      ),
+                    )
+                ],
+              ),
+                ),
+                Padding(
+              padding: EdgeInsets.all(8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: Text("Món ăn được ưa thích", style: TextStyle(
+                      color: Colors.brown,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14
+                    ),
+                    ),
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 150,
+                      child: ListView.builder(
+                        itemCount: imgDuocuathich.length,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (BuildContext context, int index) {
+                        return Padding(padding: EdgeInsets.only(left: 10, right: 10),
+                        child: CardList(i: saoDuocuathic[index], img: imgDuocuathich[index], name: monanDuocuathic[index],),
                         );
                       },
                       ),
@@ -164,7 +212,9 @@ class _HomeCTPageState extends State<HomeCTPage> {
 }
 
 class SearchFood extends SearchDelegate {
-  List<String> data = ['Vịt cỏ Vân Đình', 'Phở Bò', 'Phở Gà', 'Bún riêu'];
+  List<String> data = ['Vịt cỏ Vân Đình', 'Phở Bò', 'Phở Gà', 'Bún riêu', 'Bánh tôm',
+  'Kem tràng tiền', 'Cafe trứng', 'Bánh đa cua', 'Bánh cốm Hà Nội', 'Bún thang Hà Nội', 'Bún ốc nguội', 'Bánh mì', 'Bún chả'];
+  List<Widget> data2 = [AccountPage(title: '',), FoodTourPage(title: '',)];
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
@@ -202,6 +252,7 @@ class SearchFood extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
+    bool found = false;
     List<String> matchquery = [];
     for (var item in data) {
       if (item.toLowerCase().contains(query.toLowerCase())) {
@@ -212,6 +263,10 @@ class SearchFood extends SearchDelegate {
       var resul = matchquery[index];
       return ListTile(
         title: Text('$resul'),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => data2[index]));
+          print('ngu');
+        },
       );
     },
     itemCount: matchquery.length,
@@ -221,7 +276,19 @@ class SearchFood extends SearchDelegate {
 
 }
 class CardList extends StatelessWidget {
-  const CardList({super.key});
+  CardList({Key? key,
+  required this.i,
+  required this.name,
+  required this.img,
+  //required this.press
+  }) : super(key: key);
+
+  final double i;
+  final String name;
+  final String img;
+  //final Widget press;
+  
+  static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
 
   @override
   Widget build(BuildContext context) {
@@ -239,24 +306,44 @@ class CardList extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10),
-            child: Container(
-              width: 120,
-              height: 100,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    'assets/vitcovandinh.jpg',
-                  ),
+          Container(
+            width: 120,
+            height: 80,
+            decoration:  BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  '$img',
                 ),
               ),
             ),
           ),
-          const Text("Vịt cỏ vân đình", style: TextStyle(fontWeight: FontWeight.bold),),
-          const Text("4 sao", style: TextStyle(),)
+          TextButton(onPressed: (){
+           // Navigator.push(context, MaterialPageRoute(builder: (context) => press));
+          }, child: Text("$name", style: TextStyle(fontWeight: FontWeight.bold, color: kbackgroundAppbar),),),
+          RatingBar.builder(
+                    initialRating: i,
+                    itemSize: 13,
+                    //minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                    itemBuilder: (context, _) => Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    ),
+                    onRatingUpdate: (rating) {
+                      rating = i;
+                      // ScaffoldMessenger.of(context).showSnackBar(
+                      //   SnackBar(content: Text('Cảm ơn bạn đã đánh giá $rating sao cho Food Tour này'),
+                      //   backgroundColor: kbackgroundAppbar,
+                      //   )
+                      // );
+                      // print(rating);
+                    },
+                  )
         ],
       ),
     );

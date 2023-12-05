@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
-class FoodPage extends StatefulWidget {
-  const FoodPage({super.key, required this.title});
+class BanhDaCuaPage extends StatefulWidget {
+  const BanhDaCuaPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<FoodPage> createState() => _FoodPageState();
+  State<BanhDaCuaPage> createState() => _BanhDaCuaPageState();
 }
 
-class _FoodPageState extends State<FoodPage> {
+class _BanhDaCuaPageState extends State<BanhDaCuaPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
-  String thongtin = 'Bún ngan Hà Nội là một trong những món ăn truyền thống vẫn giữ được vị trí đặc biệt trong lòng người dân Thủ đô. Bún ngan hấp dẫn thực khách bởi phần nước dùng ngọt thanh, thịt ngan mềm, thơm ăn kèm với măng tươi vô cùng cuốn miệng. Món bún ngan Hà Nội trông có vẻ đơn giản, nhưng khi đã nếm qua bất cứ thực khách nào cũng dễ dàng bị chinh phục bởi vị ngon tinh tế của nó. Người nấu bún ngan khéo sẽ khiến bún ngan thêm đậm vị và thơm nồng hơn từ nước dùng cho đến những thớ thịt ngan thật mềm. Ngày nay bún ngan Hà Nội cũng đã có mặt ở nhiều nơi, song';
-  String congthuc = 'cho 1 bat pho thap cam db';
-  String quanngon = 'banh cuan doi can, pho ngo tho quan, bun riel pho co, bun riel bach mai, che khuc bach, banh cuan cao bang';
-  String content = 'Bún ngan Hà Nội là một trong những món ăn truyền thống vẫn giữ được vị trí đặc biệt trong lòng người dân Thủ đô. Bún ngan hấp dẫn thực khách bởi phần nước dùng ngọt thanh, thịt ngan mềm, thơm ăn kèm với măng tươi vô cùng cuốn miệng. Món bún ngan Hà Nội trông có vẻ đơn giản, nhưng khi đã nếm qua bất cứ thực khách nào cũng dễ dàng bị chinh phục bởi vị ngon tinh tế của nó. Người nấu bún ngan khéo sẽ khiến bún ngan thêm đậm vị và thơm nồng hơn từ nước dùng cho đến những thớ thịt ngan thật mềm. Ngày nay bún ngan Hà Nội cũng đã có mặt ở nhiều nơi, song';
+  String thongtin = 'Bạn có thể tìm thấy bánh đa cua tại nhiều thành phố khác tại miền Bắc, nhưng hương vị bánh đa cua Hà Nội mộc mạc, giản dị là điều khiến người ta khó quên. Sợi bánh đa dai dai ăn cùng nước dùng đậm vị, thêm chút giấm chua thanh thanh và ớt cay nồng là đúng chuẩn.';
+  String congthuc = 'Nguyên liệu:\n Cua đồng: 500gr\nSườn thăn: 300gr\nThịt nạc xay: 150gr\nCà chua: 2 quả\nMỡ phần: 100gr\nLá lốt, mộc nhĩ, hành tím, hành lá, rau ngò\nBánh đa đỏ\nRau sống ăn kèm\n \nCách làm:\nBước 1:\nCua mua về rồi đem rửa sạch, bỏ yếm, bóc mai\nBước 2:\nGiã lấy nước cua. Dùng tăm khều ra cho vào một bát nhỏ để riêng.Rửa sạch sườn với một chút muối, cho vào nồi luộc sơ qua. Tiếp theo rửa sạch lần nữa mới đem ninh làm nước dùng.\nBước 3:\nLọc thịt cua qua rây lấy nước, nêm nếm chút gia vị và một chút đầu đũa mắm tôm để tạo thêm mùi. Vừa đun các bạn vừa khuấy để để gạch cua nổi đều. Sau đó, vớt gạch ra bát và đổ nước dùng cua vào nồi nước dùng xương. Đun sôi lại lần nữa rồi múc gạch cua vào.\nBước 4:\nThái cà chua ra xào thơm cùng hành và dầu ăn, xào xong thì cho vào nồi nước dùng để tạo vị chua nhẹ';
+  String quanngon = 'Bánh đa cua Hàng Đồng: 8 Hàng Đồng, Q.Hoàn Kiếm\nBánh đa cua Phố Trung Liệt: 143 Trung Liệt, Q.Đống Đa\nBánh đa cua và miến trộn Huỳnh Thúc Kháng: 16 Huỳnh Thúc Kháng, Q.Đống Đa';
+  String content = 'Bạn có thể tìm thấy bánh đa cua tại nhiều thành phố khác tại miền Bắc, nhưng hương vị bánh đa cua Hà Nội mộc mạc, giản dị là điều khiến người ta khó quên. Sợi bánh đa dai dai ăn cùng nước dùng đậm vị, thêm chút giấm chua thanh thanh và ớt cay nồng là đúng chuẩn.';
   late PageController pageController;
   // List<Widget> inf = [
   //   Thongtin(),
@@ -80,13 +80,26 @@ class _FoodPageState extends State<FoodPage> {
                   )
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 90),
-                  child: Center(
-                    child: Image.asset('assets/logofood.png',
+                Center(
+                  child: Container(
                     width: 271,
                     height: 148,
-                    ),
+                    decoration: BoxDecoration(
+                            //shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.circular(25),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/banhdacua.jpg'
+                              ),
+                              )
+                          ),
+                    margin: EdgeInsets.only(top: 90),
+                    // child: Center(
+                    //   child: Image.asset('assets/buncha.jpg',
+                    //   width: 271,
+                    //   height: 148,
+                    //   ),
+                    // ),
                   ),
                 ),
                 
@@ -120,20 +133,21 @@ class _FoodPageState extends State<FoodPage> {
             height: MediaQuery.of(context).size.height/2,
             width: MediaQuery.of(context).size.width/1.2,
             child: Card(
-              color: Color.fromARGB(255, 230, 233, 234),
+              color: kbackgroundAppbar,
               shape: RoundedRectangleBorder(
                 side: BorderSide(
-            color: Colors.black,
+            color: kbackgroundAppbar,
             width: 2.0,
               ),
             ),
               child: ScrollableTextIndicator(
                 indicatorBarColor: kbackgroundAppbar,
                 indicatorThumbColor: kbackgroundAppbar,
-                text: Text( content,
+                text: Text(content,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16
+                  fontSize: 16,
+                  color: kbackgroundColor
                 ),),
               )
             ),
@@ -145,6 +159,7 @@ class _FoodPageState extends State<FoodPage> {
               child: Column(
                 children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         IconButton(onPressed: () {
                           setState(() {
@@ -154,7 +169,9 @@ class _FoodPageState extends State<FoodPage> {
                         icon: Icon(isclick ? Icons.favorite : Icons.favorite_border_outlined),
                         color: Colors.pink,
                         ),
+                        Padding(padding: EdgeInsets.all(15)),
                         ElevatedButton.icon(onPressed: (){}, icon: Icon(Icons.comment), label: Text('Bình Luận', style: TextStyle(color: kbackgroundAppbar))),
+                        Padding(padding: EdgeInsets.all(15)),
                         ElevatedButton.icon(onPressed: (){}, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá', style: TextStyle(color: kbackgroundAppbar))),
                       ],
                     ),

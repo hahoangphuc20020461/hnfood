@@ -3,26 +3,28 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:hnfood/Controller/datacontroller.dart';
 
-import 'Widget/Foodtour/CommentTour_screen.dart';
-import 'Widget/Foodtour/Infoodtour_screen.dart';
-import 'Widget/Foodtour/RateTour_screen.dart';
-import 'account_screen.dart';
+import '../../account_screen.dart';
+import '../../foodtour_screen.dart';
+import '../Foodtour/CommentTour_screen.dart';
+import '../Foodtour/Infoodtour_screen.dart';
+import '../Foodtour/RateTour_screen.dart';
 
-class FoodTourPage extends StatefulWidget {
-  const FoodTourPage({super.key, required this.title});
+
+class FoodLovePage extends StatefulWidget {
+  const FoodLovePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<FoodTourPage> createState() => _FoodTourPageState();
+  State<FoodLovePage> createState() => _FoodLovePageState();
 }
 
-class _FoodTourPageState extends State<FoodTourPage> {
+class _FoodLovePageState extends State<FoodLovePage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
 
-  List<String> name = ['HP FoodTour', '36 FoodTour', 'Loco FoodTour', 'Futgai Tour', 'Hoacai FoodTour'];
-  List<String> img = ["assets/hpfoodtour.png", "assets/36foodtour.jpg", "assets/locofoodtour.jpg", "assets/futgai.jpg", "assets/hoacaift.jpg"];
+  List<String> name = ['Bánh đa cua', 'Bánh tôm', 'Kem Tràng Tiền', 'Phở Bò', 'Phở Gà'];
+  List<String> img = ["assets/banhdacua.jpg", "assets/banhtom.jpg", "assets/kemtrangtien.jpg", "assets/photai.jpg", "assets/phoga.jpg"];
   List<double> sao = [3, 4.5, 4, 5, 3.5];
   List<Widget> change = [CommentTourPage(title: ''), InFoodTourPage(title: '',),
   RatingTourPage(title: '',), RatingTourPage(title: '',), RatingTourPage(title: '',)];
@@ -38,64 +40,23 @@ class _FoodTourPageState extends State<FoodTourPage> {
     //DataController dataController = Get.put(DataController());
     //DataFoodTour dataFoodTour;
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: kbackgroundAppbar,
+      ),
       resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height/7,
-                child: Container(
-                  color: kbackgroundAppbar,
-                  child: Row(
-              children: [
-                // Container(
-                //   alignment: Alignment.centerLeft,
-                //   height: MediaQuery.of(context).size.height/13,
-                //   width: MediaQuery.of(context).size.height/13,
-                //   decoration: BoxDecoration(
-                //     shape: BoxShape.circle,
-                //     image: DecorationImage(image: AssetImage('assets/logofood.png'),
-                //     )
-                //   ),
-                // ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(30, 0, 0, 0),
-                ),
-                SafeArea(
-                  child: Text("HNFood",
-                  style: TextStyle(
-                    color: Colors.yellowAccent,
-                  fontFamily: 'Schyler',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-                  ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, MediaQuery.of(context).size.height/4, 0),
-                ),
-                SafeArea(
-                  child: IconButton(
-                    color: Colors.yellowAccent,
-                    onPressed: (){
-                    showSearch(context: context, delegate: SearchFood());
-                    //Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage(title: '',)));
-                  }, icon: Icon(Icons.search)),
-                )
-              ],
-                      ),
-                ),
-              ),
               Padding(
               padding: EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Danh sách Food Tour',
+                  Text('Danh sách các món yêu thích',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30
+                    fontSize: 27,
+                    fontFamily: 'flutterfonts'
                   ),),
                   // Padding(
                   //   padding: EdgeInsets.only(bottom: 10),
@@ -161,7 +122,7 @@ class _FoodTourPageState extends State<FoodTourPage> {
 }
 
 class SearchFood extends SearchDelegate {
-  List<String> data = ['HK FoodTour', '36 FoodTour', 'LB FoodTour', '3D FoodTour', 'HN FoodTour', '5Nay Foodtour'];
+  List<String> data = ['HK FoodTour', '36 FoodTour', 'LB FoodTour', '3D FoodTour'];
   List<Widget> data2 = [AccountPage(title: '',), FoodTourPage(title: '',)];
   @override
   List<Widget>? buildActions(BuildContext context) {

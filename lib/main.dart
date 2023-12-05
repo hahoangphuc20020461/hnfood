@@ -1,8 +1,20 @@
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:hnfood/UI/Screen/Widget/monan_screen.dart';
 
-import 'UI/intro.dart';
+import 'UI/Screen/Widget/Foodtour/CommentTour_screen.dart';
+import 'UI/Screen/Widget/Foodtour/Tour/Hpfoodtour.dart';
+import 'UI/Screen/Widget/Foodtour/RateTour_screen.dart';
+import 'UI/Screen/Widget/Monan/Banhdacua_screen.dart';
+import 'UI/Screen/Widget/Monan/Buncha_screen.dart';
+import 'UI/Screen/Widget/Monan/Bunoc_screen.dart';
+import 'UI/Screen/Widget/Monan/Bunrielcua_screen.dart';
+import 'UI/Screen/Widget/Monan/Listmonanyeuthich.dart';
+import 'UI/Screen/Widget/Monan/Phobo_screen.dart';
+import 'UI/Screen/Widget/Rate/rating_screen.dart';
+import 'UI/Screen/Widget/comment_screen.dart';
+import 'UI/Screen/account_screen.dart';
+import 'UI/Screen/home_screen.dart';
+import 'UI/Screen/login.dart';
 
 void main() async {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -37,7 +50,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FoodPage(title: '')//const IntroPage(title: 'Flutter Demo Home Page'),
+      home: const BanhDaCuaPage(title: '')//const IntroPage(title: 'Flutter Demo Home Page'),
     );
   }
 }

@@ -38,6 +38,14 @@ dependencies:
   gif: ^2.2.0
   easy_splash_screen: ^1.0.4
   curved_navigation_bar: ^1.0.3
+  scrollable_text_indicator: ^0.0.2
+  flutter_rating_bar: ^4.0.1
+  comment_box: ^0.0.18
+  get: ^4.6.5
+  profile: ^0.0.1
+  circular_profile_avatar: ^2.0.5
+  material_design_icons_flutter: ^7.0.7296
+  flutter_login: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +86,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+      - family: Schyler
+        fonts:
+          - asset: assets/klavika-bold.ttf
+      - family: flutterfonts
+        fonts:
+          - asset: assets/flutterfonts.ttf
   # fonts:
   #   - family: Schyler
       # fonts:
