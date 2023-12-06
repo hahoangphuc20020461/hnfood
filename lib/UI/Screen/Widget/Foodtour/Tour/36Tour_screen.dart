@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:hnfood/UI/Screen/Widget/Foodtour/RateTour/RateHPTour_screen.dart';
-import 'package:hnfood/UI/Screen/Widget/Foodtour/Tour/HPcmt_screen.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
-class HPFoodTourPage extends StatefulWidget {
-  const HPFoodTourPage({super.key, required this.title});
+import '../RateTour/Rate36Tour_screen.dart';
+
+class basauFoodTourPage extends StatefulWidget {
+  const basauFoodTourPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<HPFoodTourPage> createState() => _HPFoodTourPageState();
+  State<basauFoodTourPage> createState() => _basauFoodTourPageState();
 }
 
-class _HPFoodTourPageState extends State<HPFoodTourPage> {
+class _basauFoodTourPageState extends State<basauFoodTourPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
@@ -69,7 +69,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       ),
                     ),
                     Padding(padding: EdgeInsets.all(8)),
-                    Text('HP FoodTour',
+                    Text('36 FoodTour',
                     style: TextStyle(
                       fontFamily: 'flutterfonts',
                       fontSize: 25,
@@ -88,7 +88,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                         fontFamily: 'flutterfonts',
                         color: kbackgroundAppbar
                       ),),
-                      Text('Hải Phòng từ lâu vốn đã luôn nổi danh với bản đồ ẩm thực phong phú. Thời gian gần đây, trên mạng xã hội “rần rần” với các review food tour Hải Phòng khiến ngày càng có nhiều người muốn đến đất cảng thử trải nghiệm các món ngon Hải Phòng.',
+                      Text('Đến với Thanh Hóa, ngoài thưởng ngoạn những cảnh đẹp “miền đất hứa”, bạn đừng quên thưởng thức những món ăn xứ Thanh ngon nức tiếng. Theo chân chúng tôi đảo một vòng Food tour Thanh Hóa nhé.',
                       style: TextStyle(
                         //fontWeight: FontWeight.bold,
                         fontSize: 14,
@@ -105,11 +105,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/bmque.jpg'),
+                        child: Image.asset('assets/nem-chua-thanh-hoa-7.jpg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Món bánh mì que nổi tiếng ở Hải Phòng',
+                        child: Text('Là đặc sản của Thanh Hóa, không ai không biết đến. Đặc sản nem chua Thanh Hóa được làm từ thịt nạc, bì lợn thái chỉ, ớt, tỏi, hạt tiêu và không thể thiếu đi lá đinh lăng. Bao bọc bên ngoài là lớp lá chuối tươi xanh. Nem ở đây có mùi vị rất khác so với các vùng miền khác, nó có đủ vị chua, cay, mặn, ngọt và dậy mùi thơm nồng nhưng không bị hắc. Là thành quả gìn giữ qua nhiều thế hệ, mang đến hương vị thơm ngon đặc biệt, và là món đặc sản nhiều người dành làm quà khi đến với xứ Thanh. Nem chua ăn theo cách truyền thống, chấm với tương ớt vẫn cứ gọi là ngon tuyệt đỉnh.',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -120,11 +120,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/chaosuon.jpg'),
+                        child: Image.asset('assets/dac-san-thanh-hoa-cha-tom.jpg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Món cháo sườn',
+                        child: Text('Không chỉ có nem chua, chả tôm cũng là một trong những món ngon nức tiếng xứ Thanh. Món ăn làm bao du khách mê mẩn khi đến đây bởi hương vị thơm ngon đặc trưng mà không nơi đâu có được.',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -135,11 +135,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/oc.jpg'),
+                        child: Image.asset('assets/dac-san-thanh-hoa-banh-khoai-tep.jpg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Hải sản cực tươi sống được bày bán ở chợ hải sản',
+                        child: Text('Món này khá giống với bánh xèo của Hà Nội, nhưng phần nhân được thay bằng rau bắp cải, rau cần thái nhỏ và tép',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -150,11 +150,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/suidin.jpg'),
+                        child: Image.asset('assets/dac-san-thanh-hoa-banh-rang-bua.jpg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Món tráng miệng sủi dìn cực ngon',
+                        child: Text('Thức quà ăn vặt này là một trong những món giản dị, gần gũi mà bạn nên thử khi đến đây. Được làm hoàn toàn từ nguyên liệu đồng quê: gạo tẻ, thịt lợn, mộc nhĩ đem gói trong lá chuối xanh. Đơn giản là vậy nhưng khi hoàn thiện lại cho ra thứ bánh béo ngon, thơm mềm rất cuốn miệng người thưởng thức.',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -172,7 +172,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                         fontFamily: 'flutterfonts',
                         color: kbackgroundAppbar
                       ),),
-                      Text('Văn phòng Tour HK,',
+                      Text('Văn phòng Tour NH,',
                       style: TextStyle(
                         //fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
@@ -180,7 +180,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                         fontFamily: 'flutterfonts',
                         
                       ),),
-                      Text('Mrs. Trang,',
+                      Text('Mrs. Vân,',
                       style: TextStyle(
                         //fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
@@ -188,7 +188,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                         fontFamily: 'flutterfonts',
                         
                       ),),
-                      Text('SĐT: 09543642351',
+                      Text('SĐT: 095436888351',
                       style: TextStyle(
                         //fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
@@ -200,11 +200,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Row(
                         children: [
                           ElevatedButton.icon(onPressed: (){
-Navigator.push(context, MaterialPageRoute(builder: (context) => HPCommentTourPage(title: '',)));
+                           
                           }, icon: Icon(Icons.comment), label: Text('Bình Luận Tour', style: TextStyle(color: kbackgroundAppbar))),
                           Padding(padding: EdgeInsets.all(8)),
                       ElevatedButton.icon(onPressed: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context) => HPRatingTourPage(title: '',)));
+ Navigator.push(context, MaterialPageRoute(builder: (context) => BaSauRatingTourPage(title: '',)));
                       }, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá Tour', style: TextStyle(color: kbackgroundAppbar))),
                         ],
                       )

@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hnfood/UI/Screen/Widget/Foodtour/RateTour/RateHPTour_screen.dart';
-import 'package:hnfood/UI/Screen/Widget/Foodtour/Tour/HPcmt_screen.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
-class HPFoodTourPage extends StatefulWidget {
-  const HPFoodTourPage({super.key, required this.title});
+class LocoFoodTourPage extends StatefulWidget {
+  const LocoFoodTourPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<HPFoodTourPage> createState() => _HPFoodTourPageState();
+  State<LocoFoodTourPage> createState() => _LocoFoodTourPageState();
 }
 
-class _HPFoodTourPageState extends State<HPFoodTourPage> {
+class _LocoFoodTourPageState extends State<LocoFoodTourPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
@@ -69,7 +67,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       ),
                     ),
                     Padding(padding: EdgeInsets.all(8)),
-                    Text('HP FoodTour',
+                    Text('Loco FoodTour',
                     style: TextStyle(
                       fontFamily: 'flutterfonts',
                       fontSize: 25,
@@ -88,7 +86,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                         fontFamily: 'flutterfonts',
                         color: kbackgroundAppbar
                       ),),
-                      Text('Hải Phòng từ lâu vốn đã luôn nổi danh với bản đồ ẩm thực phong phú. Thời gian gần đây, trên mạng xã hội “rần rần” với các review food tour Hải Phòng khiến ngày càng có nhiều người muốn đến đất cảng thử trải nghiệm các món ngon Hải Phòng.',
+                      Text('Khám phá hương vị đặc trưng của ẩm thực Hà Nội với Bản đồ Food Tour Hà Nội! Từ các món ăn truyền thống đến những món ngon độc đáo, chúng tôi sẽ dẫn bạn tới những quán ăn nổi tiếng và ẩn mình trong những con hẻm nhỏ của thành phố này.',
                       style: TextStyle(
                         //fontWeight: FontWeight.bold,
                         fontSize: 14,
@@ -105,11 +103,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/bmque.jpg'),
+                        child: Image.asset('assets/chekhucbach.jpeg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Món bánh mì que nổi tiếng ở Hải Phòng',
+                        child: Text('Chè khúc bạch là một món chè truyền thống có nguồn gốc từ Trung Quốc. Món này được làm từ bột nếp và đậu xanh, sau đó trộn với sữa đặc và thêm một số thành phần như nước cốt dừa, thạch nước cốt dừa, và trân châu. Chè khúc bạch thường có hương vị ngọt, béo ngậy và có độ mềm dẻo',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -120,11 +118,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/chaosuon.jpg'),
+                        child: Image.asset('assets/bundaumamtom.jpg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Món cháo sườn',
+                        child: Text('Có thể nói bún đậu mắm tôm Hàng Khay là địa chỉ được biết đến nhiều nhất trong list địa chỉ bún đậu mắm tôm Hà Nội. Một suất bún đậu ở đây có giá trung bình là 30.000 VNĐ. So với mức giá thì suất bún đậu ở đây khá đầy đặn. Đậu rán vàng giòn rụm, bún trắng mịn được cắt miếng vừa ăn, topping ăn kèm đa dạng bao gồm thịt chân giò, chả cốm, nem rán, dồi sụn, rau thơm… và đặc biệt là mắm tôm được pha chế vừa đậm đà vừa đưa miệng.',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -135,11 +133,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/oc.jpg'),
+                        child: Image.asset('assets/photai.jpg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Hải sản cực tươi sống được bày bán ở chợ hải sản',
+                        child: Text('Nổi tiếng với món phở, được chế biến từ nước dùng hầm xương, thịt gà hoặc thịt bò, kèm theo rau sống, hành, và gia vị. Quán Phở Bát Đàn có không gian rộng rãi, phục vụ từ sáng đến tối. Phở ở đây được đánh giá ngon, thơm và đậm đà hương vị.',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -150,11 +148,11 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Padding(
                         padding: const EdgeInsets.only(right: 5),
-                        child: Image.asset('assets/suidin.jpg'),
+                        child: Image.asset('assets/banhtom.jpg'),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
-                        child: Text('Món tráng miệng sủi dìn cực ngon',
+                        child: Text('Bánh Tôm Hồ Tây là một địa chỉ nổi tiếng với món bánh tôm tại Hà Nội. Món bánh tôm tại quán được làm từ tôm tươi ngon và bọc trong lớp vỏ giòn rụm. Bánh tôm được chiên vàng, tạo ra lớp vỏ giòn màu vàng hấp dẫn.',
                         style: TextStyle(
                           //fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -180,7 +178,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                         fontFamily: 'flutterfonts',
                         
                       ),),
-                      Text('Mrs. Trang,',
+                      Text('Mr. Hùng,',
                       style: TextStyle(
                         //fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
@@ -188,7 +186,7 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                         fontFamily: 'flutterfonts',
                         
                       ),),
-                      Text('SĐT: 09543642351',
+                      Text('SĐT: 09993642351',
                       style: TextStyle(
                         //fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
@@ -199,13 +197,9 @@ class _HPFoodTourPageState extends State<HPFoodTourPage> {
                       Padding(padding: EdgeInsets.all(10)),
                       Row(
                         children: [
-                          ElevatedButton.icon(onPressed: (){
-Navigator.push(context, MaterialPageRoute(builder: (context) => HPCommentTourPage(title: '',)));
-                          }, icon: Icon(Icons.comment), label: Text('Bình Luận Tour', style: TextStyle(color: kbackgroundAppbar))),
+                          ElevatedButton.icon(onPressed: (){}, icon: Icon(Icons.comment), label: Text('Bình Luận Tour', style: TextStyle(color: kbackgroundAppbar))),
                           Padding(padding: EdgeInsets.all(8)),
-                      ElevatedButton.icon(onPressed: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context) => HPRatingTourPage(title: '',)));
-                      }, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá Tour', style: TextStyle(color: kbackgroundAppbar))),
+                      ElevatedButton.icon(onPressed: (){}, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá Tour', style: TextStyle(color: kbackgroundAppbar))),
                         ],
                       )
                         ],

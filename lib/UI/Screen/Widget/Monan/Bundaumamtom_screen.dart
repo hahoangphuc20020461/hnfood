@@ -4,23 +4,23 @@ import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
 import '../comment_screen.dart';
 
-class BunChaPage extends StatefulWidget {
-  const BunChaPage({super.key, required this.title});
+class BundaumamtomPage extends StatefulWidget {
+  const BundaumamtomPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<BunChaPage> createState() => _BunChaPageState();
+  State<BundaumamtomPage> createState() => _BundaumamtomPageState();
 }
 
-class _BunChaPageState extends State<BunChaPage> {
+class _BundaumamtomPageState extends State<BundaumamtomPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
-  String thongtin = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
-  String congthuc = 'Nguyên liệu:\n Thịt ba chỉ 500 gr\nThịt nạc vai 500 gr\nSả 5 cây\nHành tím 4 củ\nChanh 1 trái\nCà rốt 1 củ\nRau 100 gr\nHạt nêm 4 muỗng cà phê\nĐường trắng 2 muỗng canh\nBột ngọt 3 muỗng cà phê\nNước màu 1 muỗng canh\nNước mắm 3 muỗng canh\nGiấm 1 muỗng cà phê\nỚt 2 trái\n \nCách làm:\nBước 1:\nThịt mua về bạn rửa sạch với muối, sau đó thái thịt ba chỉ thành những miếng mỏng to bản. Còn phần thịt nạc vai thì đem xay hoặc băm nhuyễn.\nBước 2:\nSả lột bớt lớp vỏ cứng bên ngoài, thái khoanh. Xay nhuyễn sả. Sau đó vắt sả để lấy nước. Xay nhuyễn hành khô và tỏi.\nBước 3:\nƯớp thịt theo tỷ lệ: 1 kg thịt : 3 thìa cà phê hạt nêm : 3 thìa đường : 3 thìa bột ngọt. Thêm vào 1 thìa canh nước hàng (nước màu), 1 thìa canh nước mắm. Phần gia vị ở trên bạn chia làm 2 phần, hành tỏi xay nhuyễn và nước sả. Một phần bạn ướp với thịt xay nhuyễn. Phần còn lai ướp với thịt cắt miếng. Nếu có thời gian thì nên ướp gia vị trước một đêm, để trong tủ lạnh thì thịt sẽ thấm rất ngon.\nBước 4:\nBào vỏ cà rốt và đu đủ rồi cho vào ngâm với nước muối đã pha loãng. Tiếp đó, cắt đu đủ và cà rốt thành những miếng mỏng. Tiếp theo bạn cho 1/2 muỗng canh đường, 1 muỗng cà phê giấm, 1 muỗng cà phê hạt nêm, chanh, ớt vào trộn đều với đu đủ cà rốt, nếm có vị chua ngọt vừa miệng.\nBước 5:\nLần lượt xếp thịt đã ướp gia vị lên vỉ nướng. Viên thịt băm thành những viên nhỏ vừa ăn. Các bạn có thể nướng bằng lò hoặc bằng than, nhưng ngon nhất vẫn là nướng trên bếp than hoa. Trong quá trình nướng nhớ phết dầu ăn lên mặt thịt để thịt không bị khô.\nBước 6:\nCho nước chấm đã pha vào nồi đun ấm. Rửa sạch các loại rau sống. Dọn bún, rau ra dĩa, cho chả, dưa đu đủ cà rốt vào nước chấm và thưởng thức.';
-  String quanngon = 'Bún chả Cửa Đông: 41 Cửa Đông, Q.Hoàn Kiếm\nBún chả Đắc Kim: 1 Hàng Mành, Q.Hoàn Kiếm\nBún chả Sinh Từ: 57 Nguyễn Khuyến, Q.Đống Đa';
-  String content = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
+  String thongtin = 'Bún đậu mắm tôm là món ngon Hà Nội “gây sốt” một thời với nguyên liệu hết sức dân dã. Một ít bún, vài miếng đậu, ăn kèm mắm tôm, rau kinh giới, tía tô, mùi tàu bạn sẽ cảm nhận được vị béo của đậu, mặn ngọt của mắm tôm. Những ai ăn lần đầu sẽ cảm giác hơi “dội” với vị nồng, nhưng dần dà sẽ bị nghiện đó nhé!';
+  String congthuc = 'Nguyên Liệu: \n 500g bún sợi nhỏ\n2 miếng đậu hũ\n400 g thịt chân giò\nMắm tôm\nRau kinh giới, dưa leo, tía tô và các loại rau gia vị, tắc, tỏi\nGia vị: đường, dầu ăn, hạt nêm\n Cách làm:\nBước 1: Luộc thịt\nThịt chân giò mua về rửa sạch. Luộc sơ qua nước sôi khoảng 2 phút, vớt ra, rửa lại thật sạch với nước lạnh. Cho lên bếp một nồi nước khác, luộc thịt đến khi chín mềm là được. Cắt miếng nhỏ vừa ăn.\nBước 2: Chiên đậu hũ\nCắt miếng vừa ăn, chiên vàng đều 2 mặt, vừa thơm vừa giòn là được.\nBước 3: Ép bún\nCách làm bún lá rất đơn giản. Để ép bún, bún tươi sau khi mua về bạn rửa sạch, trần sơ, sau đó lót lá chuối hoặc dùng giấy bọc thực phẩm dưới cái nia. Cho phần bún đã chuẩn bị lên trên phủ thêm một phần lá chuối hoặc giấy bọc thực phẩm lên mặt tiếp đến dùng một tấm thớt tròn, đè mạnh lên ép bún trong khoảng 2 tiếng, bún sẽ chắc nịch. Ép bún trong khuôn, sau đó cắt thành miếng nhỏ cho vừa ăn.\nBước 4: Rửa rau\nNgâm nước muối, rửa sạch, sắp lên dĩa cho đẹp mắt.\nBước 5: Pha mắm tôm\nMắm tôm là loại mắm có mùi rất đậm và mặn, rất nồng được ủ từ tôm và muối lên men theo cách làm truyền thống, thường được ăn kèm món bún đậu nổi tiếng của Hà Nội. Khi được pha chế lại như một nước chấm thì nó giúp phát huy hết mùi vị thơm ngon nhất của các món chính đi kèm. Hay nói cách khác, ăn bún đậu nhất định phải kèm theo mắm tôm thì món ăn mới thực sự thơm ngon và tròn vị.Mắm tôm mua về, đun sôi, sau đó nêm thêm đường cho vừa ăn. Khi mắm tôm nguội bạn có thể thêm tắc vào, sẽ thơm ngon hơn nhé.';
+  String quanngon = 'Bún đậu mắm tôm Ngõ Trạm: 1B Ngõ Trạm, Q.Hoàn Kiếm\nBún đậu Trung Hương: 49 ngõ Phất Lộc, Hàng Bạc\nBún đậu Cây Bàng – Đại La: 129 Đại La, Q.Hai Bà Trưng';
+  String content = 'Bún đậu mắm tôm là món ngon Hà Nội “gây sốt” một thời với nguyên liệu hết sức dân dã. Một ít bún, vài miếng đậu, ăn kèm mắm tôm, rau kinh giới, tía tô, mùi tàu bạn sẽ cảm nhận được vị béo của đậu, mặn ngọt của mắm tôm. Những ai ăn lần đầu sẽ cảm giác hơi “dội” với vị nồng, nhưng dần dà sẽ bị nghiện đó nhé!';
   late PageController pageController;
   // List<Widget> inf = [
   //   Thongtin(),
@@ -92,7 +92,7 @@ class _BunChaPageState extends State<BunChaPage> {
                             borderRadius: BorderRadius.circular(25),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/buncha.jpg'
+                              image: AssetImage('assets/bundaumamtom.jpg'
                               ),
                               )
                           ),

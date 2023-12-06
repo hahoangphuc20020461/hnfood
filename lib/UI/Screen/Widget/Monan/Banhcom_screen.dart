@@ -4,23 +4,23 @@ import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
 import '../comment_screen.dart';
 
-class BunChaPage extends StatefulWidget {
-  const BunChaPage({super.key, required this.title});
+class BanhcomPage extends StatefulWidget {
+  const BanhcomPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<BunChaPage> createState() => _BunChaPageState();
+  State<BanhcomPage> createState() => _BanhcomPageState();
 }
 
-class _BunChaPageState extends State<BunChaPage> {
+class _BanhcomPageState extends State<BanhcomPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
-  String thongtin = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
-  String congthuc = 'Nguyên liệu:\n Thịt ba chỉ 500 gr\nThịt nạc vai 500 gr\nSả 5 cây\nHành tím 4 củ\nChanh 1 trái\nCà rốt 1 củ\nRau 100 gr\nHạt nêm 4 muỗng cà phê\nĐường trắng 2 muỗng canh\nBột ngọt 3 muỗng cà phê\nNước màu 1 muỗng canh\nNước mắm 3 muỗng canh\nGiấm 1 muỗng cà phê\nỚt 2 trái\n \nCách làm:\nBước 1:\nThịt mua về bạn rửa sạch với muối, sau đó thái thịt ba chỉ thành những miếng mỏng to bản. Còn phần thịt nạc vai thì đem xay hoặc băm nhuyễn.\nBước 2:\nSả lột bớt lớp vỏ cứng bên ngoài, thái khoanh. Xay nhuyễn sả. Sau đó vắt sả để lấy nước. Xay nhuyễn hành khô và tỏi.\nBước 3:\nƯớp thịt theo tỷ lệ: 1 kg thịt : 3 thìa cà phê hạt nêm : 3 thìa đường : 3 thìa bột ngọt. Thêm vào 1 thìa canh nước hàng (nước màu), 1 thìa canh nước mắm. Phần gia vị ở trên bạn chia làm 2 phần, hành tỏi xay nhuyễn và nước sả. Một phần bạn ướp với thịt xay nhuyễn. Phần còn lai ướp với thịt cắt miếng. Nếu có thời gian thì nên ướp gia vị trước một đêm, để trong tủ lạnh thì thịt sẽ thấm rất ngon.\nBước 4:\nBào vỏ cà rốt và đu đủ rồi cho vào ngâm với nước muối đã pha loãng. Tiếp đó, cắt đu đủ và cà rốt thành những miếng mỏng. Tiếp theo bạn cho 1/2 muỗng canh đường, 1 muỗng cà phê giấm, 1 muỗng cà phê hạt nêm, chanh, ớt vào trộn đều với đu đủ cà rốt, nếm có vị chua ngọt vừa miệng.\nBước 5:\nLần lượt xếp thịt đã ướp gia vị lên vỉ nướng. Viên thịt băm thành những viên nhỏ vừa ăn. Các bạn có thể nướng bằng lò hoặc bằng than, nhưng ngon nhất vẫn là nướng trên bếp than hoa. Trong quá trình nướng nhớ phết dầu ăn lên mặt thịt để thịt không bị khô.\nBước 6:\nCho nước chấm đã pha vào nồi đun ấm. Rửa sạch các loại rau sống. Dọn bún, rau ra dĩa, cho chả, dưa đu đủ cà rốt vào nước chấm và thưởng thức.';
-  String quanngon = 'Bún chả Cửa Đông: 41 Cửa Đông, Q.Hoàn Kiếm\nBún chả Đắc Kim: 1 Hàng Mành, Q.Hoàn Kiếm\nBún chả Sinh Từ: 57 Nguyễn Khuyến, Q.Đống Đa';
-  String content = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
+  String thongtin = 'Bàn về đặc sản Hà Nội "được lòng" du khách, không thể nào không nhắc đến bánh cốm. Đây là món ăn vặt Hà Nội nổi tiếng bởi vị ngọt thanh và hương thơm đặc trưng hấp dẫn. Vỏ bánh được làm từ nếp cái hoa vàng màu xanh lá bắt mắt, ngọt và dẻo, ôm lấy phần nhân làm từ sầu riêng hoặc đậu xanh. Bánh cốm Hà Nội tuyệt hảo nhất khi dùng cùng trà nóng; là món ngon ngày Tết được nhiều người yêu thích. ';
+  String congthuc = 'Nguyên Liệu: \n Cốm khô 300 gram\nĐậu xanh 50 gram\nĐường cát 80 gram\nBột nếp 3 muỗng canh\nDầu ăn 1 muỗng canh\nLá dứa 20 gram\nNước hoa bưởi 10 ml\n \nCách làm: \nBước 1: Ngâm cốm với lá dứa\nCắt nhỏ lá dứa và cho vào máy xay sinh tố cùng 100 ml nước lọc xay nhuyễn rồi lọc qua rây lấy nước cốt.Cốm nhặt bỏ những hạt sạn, rửa qua với nước ấm rồi đem ngâm với phần nước cốt lá dứa trong khoảng 1 tiếng\nBước 2: Làm nhân bánh\nCho đậu xanh đã ngâm mềm vào nồi nấu chín nhừ rồi xay nhuyễn. Sau đó cho đậu vào chảo chống dính 50g đường, bột nếp, vài giọt tinh dầu hoa bưởi vào đậu khuấy đều và sên ở lửa nhỏ. Sên tới khi đậu mịn dẻo là được.\nBước 3: Làm vỏ bánh\nĐun sôi 300 ml nước lọc với 30g đường còn lại, sau đó cho phần cốm đã được ngâm với nước lá dứa ban nãy vô nấu cùng. Vừa nấu vừa khuấy thật đều tay tới khi cốm tan hết là được.\nBước 4:Gói bánh \nChờ cốm thật nguội để gói bánh. Trải một lớp ni lông lên thớt, phết một lớp dầu ăn mỏng lên muỗng rồi múc cốm cho lên tấm ni lông, sau đó thêm phần nhân đậu xanh lên trên, cuối cùng phủ lên 1 lớp cốm nữa rồi gói bánh lại.';
+  String quanngon = 'Bánh cốm Bảo Minh: số 12, Hàng Than, Ba Đình, Hà Nội \nBánh cốm Tươi Xào Xưa Nay: số 60, Hàng Than, Ba Đình, Hà Nội \nCốm Vòng Hà Nội: số 36, Ngõ 63 Đường Xuân Thủy, Cầu Giấy, Hà Nội';
+  String content = 'Bàn về đặc sản Hà Nội "được lòng" du khách, không thể nào không nhắc đến bánh cốm. Đây là món ăn vặt Hà Nội nổi tiếng bởi vị ngọt thanh và hương thơm đặc trưng hấp dẫn. Vỏ bánh được làm từ nếp cái hoa vàng màu xanh lá bắt mắt, ngọt và dẻo, ôm lấy phần nhân làm từ sầu riêng hoặc đậu xanh. Bánh cốm Hà Nội tuyệt hảo nhất khi dùng cùng trà nóng; là món ngon ngày Tết được nhiều người yêu thích.  ';
   late PageController pageController;
   // List<Widget> inf = [
   //   Thongtin(),
@@ -92,7 +92,7 @@ class _BunChaPageState extends State<BunChaPage> {
                             borderRadius: BorderRadius.circular(25),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/buncha.jpg'
+                              image: AssetImage('assets\banhcomhn.jpg'
                               ),
                               )
                           ),

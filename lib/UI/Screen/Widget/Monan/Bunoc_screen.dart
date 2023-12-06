@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hnfood/UI/Screen/Widget/Rate/rating_screen.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
+
+import '../comment_screen.dart';
 
 class BunOcPage extends StatefulWidget {
   const BunOcPage({super.key, required this.title});
@@ -170,9 +173,13 @@ class _BunOcPageState extends State<BunOcPage> {
                         color: Colors.pink,
                         ),
                         Padding(padding: EdgeInsets.all(15)),
-                        ElevatedButton.icon(onPressed: (){}, icon: Icon(Icons.comment), label: Text('Bình Luận', style: TextStyle(color: kbackgroundAppbar))),
+                        ElevatedButton.icon(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => CommentPage(title: '',)));
+                        }, icon: Icon(Icons.comment), label: Text('Bình Luận', style: TextStyle(color: kbackgroundAppbar))),
                         Padding(padding: EdgeInsets.all(15)),
-                        ElevatedButton.icon(onPressed: (){}, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá', style: TextStyle(color: kbackgroundAppbar))),
+                        ElevatedButton.icon(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => RatingPage(title: '',)));
+                        }, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá', style: TextStyle(color: kbackgroundAppbar))),
                       ],
                     ),
                     

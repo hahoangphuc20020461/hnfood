@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:easy_splash_screen/easy_splash_screen.dart';
+import 'package:hnfood/UI/Screen/login.dart';
 
 import 'Screen/home_screen.dart';
 
@@ -33,7 +34,7 @@ class _LogoPageState extends State<LogoPage> {
         showLoader: false,
         durationInSeconds: 2,
         //navigator: LoginPage(title: ''),
-        navigator: HomePage(title: ''),
+        navigator: LoginPage(title: ''),
        )
     );
   }

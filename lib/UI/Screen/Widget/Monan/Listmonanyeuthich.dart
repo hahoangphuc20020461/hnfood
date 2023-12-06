@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:hnfood/Controller/datacontroller.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Banhcom_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Banhdacua_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Banhtom_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Phobo_screen.dart';
 
 import '../../account_screen.dart';
 import '../../foodtour_screen.dart';
@@ -23,11 +27,11 @@ class _FoodLovePageState extends State<FoodLovePage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
 
-  List<String> name = ['Bánh đa cua', 'Bánh tôm', 'Kem Tràng Tiền', 'Phở Bò', 'Phở Gà'];
-  List<String> img = ["assets/banhdacua.jpg", "assets/banhtom.jpg", "assets/kemtrangtien.jpg", "assets/photai.jpg", "assets/phoga.jpg"];
+  List<String> name = ['Bánh đa cua', 'Bánh tôm', 'Bánh Cốm', 'Phở Bò'];
+  List<String> img = ["assets/banhdacua.jpg", "assets/banhtom.jpg", "assets/kemtrangtien.jpg", "assets/photai.jpg"];
   List<double> sao = [3, 4.5, 4, 5, 3.5];
-  List<Widget> change = [CommentTourPage(title: ''), InFoodTourPage(title: '',),
-  RatingTourPage(title: '',), RatingTourPage(title: '',), RatingTourPage(title: '',)];
+  List<Widget> change = [BanhDaCuaPage(title: ''), BanhtomPage(title: ''),
+  BanhcomPage(title: '',), PhoboPage(title: '',)];
   
   @override
   void initState() {

@@ -6,6 +6,9 @@ import 'package:hnfood/Controller/datacontroller.dart';
 import 'Widget/Foodtour/CommentTour_screen.dart';
 import 'Widget/Foodtour/Infoodtour_screen.dart';
 import 'Widget/Foodtour/RateTour_screen.dart';
+import 'Widget/Foodtour/Tour/36Tour_screen.dart';
+import 'Widget/Foodtour/Tour/Hpfoodtour.dart';
+import 'Widget/Foodtour/Tour/LocoTour_screen.dart';
 import 'account_screen.dart';
 
 class FoodTourPage extends StatefulWidget {
@@ -24,8 +27,8 @@ class _FoodTourPageState extends State<FoodTourPage> {
   List<String> name = ['HP FoodTour', '36 FoodTour', 'Loco FoodTour', 'Futgai Tour', 'Hoacai FoodTour'];
   List<String> img = ["assets/hpfoodtour.png", "assets/36foodtour.jpg", "assets/locofoodtour.jpg", "assets/futgai.jpg", "assets/hoacaift.jpg"];
   List<double> sao = [3, 4.5, 4, 5, 3.5];
-  List<Widget> change = [CommentTourPage(title: ''), InFoodTourPage(title: '',),
-  RatingTourPage(title: '',), RatingTourPage(title: '',), RatingTourPage(title: '',)];
+  List<Widget> change = [HPFoodTourPage(title: ''), basauFoodTourPage(title: '',),
+  LocoFoodTourPage(title: '',), LocoFoodTourPage(title: '',), LocoFoodTourPage(title: '',)];
   
   @override
   void initState() {
@@ -161,8 +164,8 @@ class _FoodTourPageState extends State<FoodTourPage> {
 }
 
 class SearchFood extends SearchDelegate {
-  List<String> data = ['HK FoodTour', '36 FoodTour', 'LB FoodTour', '3D FoodTour', 'HN FoodTour', '5Nay Foodtour'];
-  List<Widget> data2 = [AccountPage(title: '',), FoodTourPage(title: '',)];
+  List<String> data = ['HP FoodTour', '36 FoodTour', 'Loco FoodTour', 'Futgai Tour', 'Hoacai FoodTour'];
+  List<Widget> data1 = [HPFoodTourPage(title: '',), basauFoodTourPage(title: '',), LocoFoodTourPage(title: ''), LocoFoodTourPage(title: ''), LocoFoodTourPage(title: '')];
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
@@ -191,10 +194,7 @@ class SearchFood extends SearchDelegate {
       var resul = matchquery[index];
       return ListTile(
         title: Text('$resul'),
-        onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => data2[index]));
-          print('ngu');
-        },
+        
       );
     },
     itemCount: matchquery.length,
@@ -214,6 +214,10 @@ class SearchFood extends SearchDelegate {
       var resul = matchquery[index];
       return ListTile(
         title: Text('$resul'),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => data1[index]));
+          print('ngu');
+        },
       );
     },
     itemCount: matchquery.length,

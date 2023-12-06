@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Banhcom_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Banhdacua_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Banhmi_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Banhtom_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Buncha_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Bunoc_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Bunrielcua_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Bunthang_screen.dart';
+import 'package:hnfood/UI/Screen/Widget/Monan/Phobo_screen.dart';
 
 import 'account_screen.dart';
 import 'foodtour_screen.dart';
@@ -19,17 +28,19 @@ class _HomeCTPageState extends State<HomeCTPage> {
   List<String> imgGoiy = ["assets/banhmihanoi.jpg", "assets/banhtom.jpg", "assets/banhduc.jpg", "assets/bunthang.jpg", "assets/chaosuon.jpg", "assets/charuoi.jpg", "assets/photai.jpg"];
   List<String> monanGoiy = ['Bánh Mì Hà Nội', 'Bánh Tôm Hồ Tây', 'Bánh Đúc Hà Nội', 'Bún Thang', 'Cháo sườn', 'Chả rươi', 'Phở bò'];
   List<double> saoGoiy = [4, 3.5, 3.5, 4.5, 4, 3, 5];
+  List<Widget>scrGoiy = [BanhmiPage(title: ''), BanhtomPage(title: ''), BanhtomPage(title: ''), BunthangPage(title: ''),  BanhtomPage(title: ''), BanhmiPage(title: ''), PhoboPage(title: '')];
 
   List<String> imgTruyenthong = ["assets/banhcomhn.jpg", "assets/bunthang.jpg", "assets/bunocnguoi.jpg", "assets/banhmihanoi.jpg",
   "assets/buncha.jpg", "assets/phoga.jpg", "assets/photai.jpg", "assets/banhduc.jpg"];
   List<String> monanTruyenthong = ['Bánh cốm Hà Nội', 'Bún thang Hà Nội', 'Bún ốc nguội', 'Bánh mì', 'Bún chả', 'Phở gà', 'Phở bò', 'Bánh đúc'];
   List<double> saoTruyenthong = [4.5, 4, 3.5, 4.5, 4, 4, 5, 3.5];
+  List<Widget>scrTruyenthong = [BanhcomPage(title: ''), BunthangPage(title: ''), BunOcPage(title: ''), BunChaPage(title: ''), PhoboPage(title: ''), PhoboPage(title: ''), BanhmiPage(title: ''), BanhcomPage(title: '')];
   
-  List<String> imgDuocuathich = ["assets/banhtom.jpg", "assets/bunrielcua.jpg", "assets/kemtrangtien.jpg", "assets/cftrung.jpg", "assets/banhdacua.jpg"];
-  List<String> monanDuocuathic = ['Bánh tôm', 'Bún riêu cua', 'Kem Tràng Tiền', 'Cafe trứng', 'Bánh đa cua'];
-  List<double> saoDuocuathic = [3, 5, 4.5, 2.5, 4];
-
-  List<Widget> tutu = [];
+  List<String> imgDuocuathich = ["assets/banhtom.jpg", "assets/bunrielcua.jpg", "assets/cftrung.jpg", "assets/banhdacua.jpg"];
+  List<String> monanDuocuathic = ['Bánh tôm', 'Bún riêu cua', 'Cafe trứng', 'Bánh đa cua'];
+  List<double> saoDuocuathic = [3, 5, 4.5, 4];
+  List<Widget> scrDuocuathic = [BanhtomPage(title: ''), BunRieuCuaPage(title: ''), BunRieuCuaPage(title: ''), BanhDaCuaPage(title: '')];
+  
   @override
   void initState() {
     // TODO: implement initState
@@ -136,7 +147,7 @@ class _HomeCTPageState extends State<HomeCTPage> {
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (BuildContext context, int index) {
                       return Padding(padding: EdgeInsets.only(left: 10, right: 10),
-                      child: CardList(i: saoGoiy[index], img: imgGoiy[index], name: monanGoiy[index],),
+                      child: CardList(i: saoGoiy[index], img: imgGoiy[index], name: monanGoiy[index], press: scrGoiy[index],),
                       );
                     },
                     ),
@@ -167,7 +178,7 @@ class _HomeCTPageState extends State<HomeCTPage> {
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (BuildContext context, int index) {
                         return Padding(padding: EdgeInsets.only(left: 10, right: 10),
-                        child: CardList(i: saoTruyenthong[index], img: imgTruyenthong[index], name: monanTruyenthong[index], ),
+                        child: CardList(i: saoTruyenthong[index], img: imgTruyenthong[index], name: monanTruyenthong[index], press: scrTruyenthong[index], ),
                         );
                       },
                       ),
@@ -197,7 +208,7 @@ class _HomeCTPageState extends State<HomeCTPage> {
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (BuildContext context, int index) {
                         return Padding(padding: EdgeInsets.only(left: 10, right: 10),
-                        child: CardList(i: saoDuocuathic[index], img: imgDuocuathich[index], name: monanDuocuathic[index],),
+                        child: CardList(i: saoDuocuathic[index], img: imgDuocuathich[index], name: monanDuocuathic[index], press: scrDuocuathic[index],),
                         );
                       },
                       ),
@@ -212,9 +223,11 @@ class _HomeCTPageState extends State<HomeCTPage> {
 }
 
 class SearchFood extends SearchDelegate {
-  List<String> data = ['Vịt cỏ Vân Đình', 'Phở Bò', 'Phở Gà', 'Bún riêu', 'Bánh tôm',
-  'Kem tràng tiền', 'Cafe trứng', 'Bánh đa cua', 'Bánh cốm Hà Nội', 'Bún thang Hà Nội', 'Bún ốc nguội', 'Bánh mì', 'Bún chả'];
-  List<Widget> data2 = [AccountPage(title: '',), FoodTourPage(title: '',)];
+  List<String> data = ['Phở Bò', 'Bún riêu', 'Bánh tôm',
+  'Bánh Mì Hà Nội', 'Cafe trứng', 'Bánh đa cua', 'Bánh cốm Hà Nội', 'Bún thang Hà Nội', 'Bún ốc nguội', 'Bánh mì', 'Bún chả'];
+  List<Widget> data2 = [PhoboPage(title: '',), BunRieuCuaPage(title: '',), BanhtomPage(title: ''),
+  BanhmiPage(title: ''), BanhDaCuaPage(title: ''), BanhDaCuaPage(title: ''), BanhcomPage(title: ''),
+  BunthangPage(title: ''), BunOcPage(title: ''), BanhmiPage(title: ''), BunChaPage(title: '')];
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
@@ -280,13 +293,13 @@ class CardList extends StatelessWidget {
   required this.i,
   required this.name,
   required this.img,
-  //required this.press
+  required this.press
   }) : super(key: key);
 
   final double i;
   final String name;
   final String img;
-  //final Widget press;
+  final Widget press;
   
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
 
@@ -320,7 +333,7 @@ class CardList extends StatelessWidget {
             ),
           ),
           TextButton(onPressed: (){
-           // Navigator.push(context, MaterialPageRoute(builder: (context) => press));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => press));
           }, child: Text("$name", style: TextStyle(fontWeight: FontWeight.bold, color: kbackgroundAppbar),),),
           RatingBar.builder(
                     initialRating: i,

@@ -4,23 +4,23 @@ import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
 import '../comment_screen.dart';
 
-class BunChaPage extends StatefulWidget {
-  const BunChaPage({super.key, required this.title});
+class BunthangPage extends StatefulWidget {
+  const BunthangPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<BunChaPage> createState() => _BunChaPageState();
+  State<BunthangPage> createState() => _BunthangPageState();
 }
 
-class _BunChaPageState extends State<BunChaPage> {
+class _BunthangPageState extends State<BunthangPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
-  String thongtin = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
-  String congthuc = 'Nguyên liệu:\n Thịt ba chỉ 500 gr\nThịt nạc vai 500 gr\nSả 5 cây\nHành tím 4 củ\nChanh 1 trái\nCà rốt 1 củ\nRau 100 gr\nHạt nêm 4 muỗng cà phê\nĐường trắng 2 muỗng canh\nBột ngọt 3 muỗng cà phê\nNước màu 1 muỗng canh\nNước mắm 3 muỗng canh\nGiấm 1 muỗng cà phê\nỚt 2 trái\n \nCách làm:\nBước 1:\nThịt mua về bạn rửa sạch với muối, sau đó thái thịt ba chỉ thành những miếng mỏng to bản. Còn phần thịt nạc vai thì đem xay hoặc băm nhuyễn.\nBước 2:\nSả lột bớt lớp vỏ cứng bên ngoài, thái khoanh. Xay nhuyễn sả. Sau đó vắt sả để lấy nước. Xay nhuyễn hành khô và tỏi.\nBước 3:\nƯớp thịt theo tỷ lệ: 1 kg thịt : 3 thìa cà phê hạt nêm : 3 thìa đường : 3 thìa bột ngọt. Thêm vào 1 thìa canh nước hàng (nước màu), 1 thìa canh nước mắm. Phần gia vị ở trên bạn chia làm 2 phần, hành tỏi xay nhuyễn và nước sả. Một phần bạn ướp với thịt xay nhuyễn. Phần còn lai ướp với thịt cắt miếng. Nếu có thời gian thì nên ướp gia vị trước một đêm, để trong tủ lạnh thì thịt sẽ thấm rất ngon.\nBước 4:\nBào vỏ cà rốt và đu đủ rồi cho vào ngâm với nước muối đã pha loãng. Tiếp đó, cắt đu đủ và cà rốt thành những miếng mỏng. Tiếp theo bạn cho 1/2 muỗng canh đường, 1 muỗng cà phê giấm, 1 muỗng cà phê hạt nêm, chanh, ớt vào trộn đều với đu đủ cà rốt, nếm có vị chua ngọt vừa miệng.\nBước 5:\nLần lượt xếp thịt đã ướp gia vị lên vỉ nướng. Viên thịt băm thành những viên nhỏ vừa ăn. Các bạn có thể nướng bằng lò hoặc bằng than, nhưng ngon nhất vẫn là nướng trên bếp than hoa. Trong quá trình nướng nhớ phết dầu ăn lên mặt thịt để thịt không bị khô.\nBước 6:\nCho nước chấm đã pha vào nồi đun ấm. Rửa sạch các loại rau sống. Dọn bún, rau ra dĩa, cho chả, dưa đu đủ cà rốt vào nước chấm và thưởng thức.';
-  String quanngon = 'Bún chả Cửa Đông: 41 Cửa Đông, Q.Hoàn Kiếm\nBún chả Đắc Kim: 1 Hàng Mành, Q.Hoàn Kiếm\nBún chả Sinh Từ: 57 Nguyễn Khuyến, Q.Đống Đa';
-  String content = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
+  String thongtin = 'Bún thang Hà Nội có thể gọi là “đệ nhất cầu kỳ” vì phải dùng đến 20 nguyên liệu để làm nên tô bún thơm ngon. Thành phần chính bao gồm: trứng gà chiên mỏng xắt nhỏ, lườn gà xé, giò lụa xắt mỏng, tôm, mực, rau răm, v.v... tất cả tạo nên tô bún sắc màu đẹp mắt và ngon miệng. Quả xứng đáng là món ăn ngon Hà Nội nổi bật, đúng không nào? ';
+  String congthuc = 'Nguyên liệu:\n Gà ta: 1 con \nXương ống: 500g \nTôm he khô: 100g \nMực khô: 1 con ( có thể thay bằng sá sùng) \nCủ cải khô: 100g\nTrứng gà: 3 quả \nNấm hương: 10 cái \nRau răm: 1 mớ\nMắm tôm: 1 chén con \nGiò lụa: 200g \nTinh dầu cà cuống (không có bỏ qua).\nHành khô: 3 củ \nHành lá \nGừng tươi: 1 củ \nBún rối.\nGia vị: nước mắm, muối, hạt nêm, bột canh tôm, giấm, đường cát trắng\n \n Cách làm:\nBước 1: Sơ chế các loại rau củ \nHành lá, mùi tàu, rau răm đem nhặt rồi rửa sạch với nước và để ráo rồi đem thái nhỏ, để riêng. Nấm khô nhặt sạch, ngâm nở sau đó cắt bỏ chân và cắt nhỏ. Để lại 3 chiếc nấm hương để cho vào nước dùng ninh cho dậy mùi Gừng và hành khô đã rửa sạch đem nướng cho đến khi nào chín và có mùi thơm.\n Bước 2: Sơ chế mực và tôm khô \nMực khô đem nướng chín sau đó giã hơi dập. Tôm he khô tách riêng đầu và vỏ tôm để nướng thơm bằng lò vi sóng, sau đó đem giã hơi dập.  Phần thịt tôm ngâm nước ấm nở, vắt khô\nBước 3: Sơ chế gà \nGà ta vặt sạch lông, sau đó đem xát muối toàn bộ gà để khử mùi hôi. Tiếp đó bạn rửa lại gà với nước và để ráo. Đem luộc chín gà sau đó nhanh tay thả vào chậu nước đá ngâm cho da gà giòn. Gà vớt ra để nguội, lọc xương, lấy phần lườn gà xé sợi nhỏ, phần da gà thái sợi nhỏ như bún\n Bước 4: Nấu nước dùng \nXương lợn rửa sạch và đem chần qua nước sôi để khử mùi hôi cho nước dùng. Sau đó bạn cho phần xương lợn vào nước luộc gà để ninh khoảng 1 tiếng trong nồi ấp suất điện Khi ninh được 1 tiếng, bạn cho phần tôm he khô, mực khô đã nướng vào trong túi lọc và thả vào nước dùng. Thêm hành khô, gừng đã nướng sơ, 3 cái nấm hương vào ninh tiếp 1 tiếng nữa. Khi nước dùng đã ninh gần đủ thời gian, bạn cho 1 thìa hạt nêm, 1 thìa đường, 2 thìa bột canh tôm và 1 thìa nước mắm. Bạn nên nêm nếm nhạt hơn khẩu vị để khi ăn cho mắm tôm vào bát không bị mặn.\n Bước 5: Sơ chế các củ cải khô \nCủ cải khô cắt thành khúc vừa ăn. Sau đó đem ngâm nở củ cải khô trong nước ấm khoảng 30 phút rồi đem rửa sạch. Củ cải sau khi rửa bạn vắt bớt nước và đem trộn với 2 thìa dấm, 1 thìa đường trắng, 1 thìa nước mắm, tương ớt ( hoặc ớt tươi) để ngâm 30 phút để củ cải thấm đều gia vị \n Bước 6: Làm ruốc tôm \n Phần tôm he khô sau khi ngâm nước, vắt khô đem lên chảo rang cho tôm vàng mặt, săn lại. Giã phần cháy tôm này thật bông để làm thành ruốc tôm. \nBước 7: Tráng trứng \nĐánh tan 2 quả trứng gà và 1 lòng đỏ trứng gà với 1 thìa cơm rượu trắng, 1 thìa nước lọc.  Để trứng tráng được mỏng, bạn nên cho 1 chút dầu ăn lên chảo sau đó dùng giấy thấm dầu quét nhẹ một lớp mỏng để chảo có thật ít dầu ăn. Sau đó bạn cho 1 thìa trứng vào chảo, láng thật mỏng và rán ở mức lửa nhỏ. Làm lần lượt cho tới khi rán hết trứng. Tiếp đó, xếp các lớp trứng lên nhau, cuộn tròn và thái chỉ thật nhỏ. \n Bước 8: Thái giò lụa và chần bún \nGiò lụa bạn cũng đem thái chỉ thật mỏng và để riêng. Bún rối đem trụng qua với nước sôi. \nBước 9: Hoàn thành \nCho bún ra bát, sau đó xếp các loại nhân: trứng, gà xé, giò lụa thái chỉ, nấm hương thái nhỏ, hành lá, rau răm, mùi tàu. Chan nước dùng nóng 1 lần cho nguyên liệu nóng lên rồi chắt nước ra. Sau đó mới chan lần 2 và thêm ruốc tôm bông lên trên. Khi ăn tuỳ theo khẩu vị bạn có thể bỏ thêm mắm tôm, vắt chanh, ớt kèm.';
+  String quanngon = 'Bún thang Cầu Gỗ: 48 Cầu Gỗ, Q.Hoàn Kiếm\n Bún thang Hàng Hòm: số 2 ngõ Hàng Chỉ, Hàng Hòm, Q.Hoàn Kiếm\nBún thang Hàng Hành: 29 Hàng Hành, Hoàn Kiếm';
+  String content = 'Bún thang Hà Nội có thể gọi là “đệ nhất cầu kỳ” vì phải dùng đến 20 nguyên liệu để làm nên tô bún thơm ngon. Thành phần chính bao gồm: trứng gà chiên mỏng xắt nhỏ, lườn gà xé, giò lụa xắt mỏng, tôm, mực, rau răm, v.v... tất cả tạo nên tô bún sắc màu đẹp mắt và ngon miệng. Quả xứng đáng là món ăn ngon Hà Nội nổi bật, đúng không nào? ';
   late PageController pageController;
   // List<Widget> inf = [
   //   Thongtin(),
@@ -92,7 +92,7 @@ class _BunChaPageState extends State<BunChaPage> {
                             borderRadius: BorderRadius.circular(25),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/buncha.jpg'
+                              image: AssetImage('assets/bunthang.jpg'
                               ),
                               )
                           ),

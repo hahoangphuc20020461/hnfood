@@ -4,23 +4,23 @@ import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
 import '../comment_screen.dart';
 
-class BunChaPage extends StatefulWidget {
-  const BunChaPage({super.key, required this.title});
+class BanhtomPage extends StatefulWidget {
+  const BanhtomPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<BunChaPage> createState() => _BunChaPageState();
+  State<BanhtomPage> createState() => _BanhtomPageState();
 }
 
-class _BunChaPageState extends State<BunChaPage> {
+class _BanhtomPageState extends State<BanhtomPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
-  String thongtin = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
-  String congthuc = 'Nguyên liệu:\n Thịt ba chỉ 500 gr\nThịt nạc vai 500 gr\nSả 5 cây\nHành tím 4 củ\nChanh 1 trái\nCà rốt 1 củ\nRau 100 gr\nHạt nêm 4 muỗng cà phê\nĐường trắng 2 muỗng canh\nBột ngọt 3 muỗng cà phê\nNước màu 1 muỗng canh\nNước mắm 3 muỗng canh\nGiấm 1 muỗng cà phê\nỚt 2 trái\n \nCách làm:\nBước 1:\nThịt mua về bạn rửa sạch với muối, sau đó thái thịt ba chỉ thành những miếng mỏng to bản. Còn phần thịt nạc vai thì đem xay hoặc băm nhuyễn.\nBước 2:\nSả lột bớt lớp vỏ cứng bên ngoài, thái khoanh. Xay nhuyễn sả. Sau đó vắt sả để lấy nước. Xay nhuyễn hành khô và tỏi.\nBước 3:\nƯớp thịt theo tỷ lệ: 1 kg thịt : 3 thìa cà phê hạt nêm : 3 thìa đường : 3 thìa bột ngọt. Thêm vào 1 thìa canh nước hàng (nước màu), 1 thìa canh nước mắm. Phần gia vị ở trên bạn chia làm 2 phần, hành tỏi xay nhuyễn và nước sả. Một phần bạn ướp với thịt xay nhuyễn. Phần còn lai ướp với thịt cắt miếng. Nếu có thời gian thì nên ướp gia vị trước một đêm, để trong tủ lạnh thì thịt sẽ thấm rất ngon.\nBước 4:\nBào vỏ cà rốt và đu đủ rồi cho vào ngâm với nước muối đã pha loãng. Tiếp đó, cắt đu đủ và cà rốt thành những miếng mỏng. Tiếp theo bạn cho 1/2 muỗng canh đường, 1 muỗng cà phê giấm, 1 muỗng cà phê hạt nêm, chanh, ớt vào trộn đều với đu đủ cà rốt, nếm có vị chua ngọt vừa miệng.\nBước 5:\nLần lượt xếp thịt đã ướp gia vị lên vỉ nướng. Viên thịt băm thành những viên nhỏ vừa ăn. Các bạn có thể nướng bằng lò hoặc bằng than, nhưng ngon nhất vẫn là nướng trên bếp than hoa. Trong quá trình nướng nhớ phết dầu ăn lên mặt thịt để thịt không bị khô.\nBước 6:\nCho nước chấm đã pha vào nồi đun ấm. Rửa sạch các loại rau sống. Dọn bún, rau ra dĩa, cho chả, dưa đu đủ cà rốt vào nước chấm và thưởng thức.';
-  String quanngon = 'Bún chả Cửa Đông: 41 Cửa Đông, Q.Hoàn Kiếm\nBún chả Đắc Kim: 1 Hàng Mành, Q.Hoàn Kiếm\nBún chả Sinh Từ: 57 Nguyễn Khuyến, Q.Đống Đa';
-  String content = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
+  String thongtin = 'Du lịch Hà Nội mà chưa thưởng thức đặc sản lòng rán thì quả thật là thiệt thòi lớn đối với thực thần chân chính. Miếng lòng sạch được rán chín cháy cạnh, ngoài giòn trong mềm, ăn cùng với rau thơm, bún tươi, chấm thêm mắm tôm chua cay thì phải nói là “bùng nổ hương vị”.  có thể thử lòng xài, lòng hấp, gỏi lòng…; đều là “cực phẩm” đấy!';
+  String congthuc = 'Nguyên Liệu: \n Tôm 500 gr\nBột mì 200 gr\nBột năng 100 gr\nKhoai lang 300 gr\nSu hào 100 gr\nCà rốt 100 gr\nTrứng 2 quả\nXà lách 200 gr\nTỏi 3 tép\nỚt 2 trái\nGiấm ăn 4 muỗng canh\nNước mắm 2 muỗng canh\nDầu ăn 4 muỗng canh\nGia vị thông dụng 1 ít\n Cách làm:\nBước 1: Sơ chế tôm\nĐể loại bớt mùi tanh của tôm, bạn ngâm tôm với nước muối loãng khoảng 10 phút sau đó cắt bỏ đầu, lột bỏ vỏ chừa lại phần vỏ đuôi tôm, rút bỏ chỉ tôm rồi rửa lại với nước nhiều lần, để ráo.\nBước 2: Sơ chế các nguyên liệu khác\nKhoai lang gọt vỏ, cắt lát, thái sợi nhỏ rồi cho khoai vào thau nước muối loãng ngâm khoảng 10 phút. Sau đó rửa sạch lại với nước rồi vớt ra rổ để ráo.Cà rốt, gọt vỏ, tỉa hoa, thái lát mỏng. Su hào, gọt vỏ, thái lát rồi cắt lát hình vuông hoặc hình chữ nhật vừa ăn.Cho cà rốt, su hào vào 1 cái chén ngâm với 2 muỗng canh giấm khoảng 15 phút rồi vớt ra để ráo. Tỏi bóc vỏ, băm nhuyễn. Ớt rửa sạch, thái nhỏ.Rau xà lách, bỏ gốc, lá hư, rửa sạch, ngâm với nước muối loãng khoảng 15 phút, vớt ra rửa lại với nước sạch rồi để ráo.\nBước 3: Trộn bột chiên\nCho 200gr bột mì, 100gr bột năng vào 1 cái âu sau đó cho từ từ 150ml nước vào trộn đều đển khi bột được hòa quyện,Tiếp đến, bạn đập 2 cái trứng gà cho vào âu bột, trộn đều, rồi để bột nghỉ 30 phút.\nBước 4: Ướp tôm\nƯớp tôm với 1 muỗng canh hạt nêm, 1 thìa muỗng cà phê muối, 1 muỗng cà phê đường, 1/2 muỗng cà phê hạt tiêu, trộn đều và ướp khoảng 15 phút.\nBước 5: Lăn bột và chiên bánh\nCho tôm và khoai lang cắt sợi vào hỗn hợp bột rồi trộn đều.Bắc chảo lên bếp mở lửa lớn, thêm 4 muỗng canh dầu ăn, đợi dầu nóng, bạn múc 1 vá hỗn hợp bột, khoai và tôm vào chảo.Chỉnh cho con tôm nằm ở giữa rồi chiên khoảng 4 - 5 phút cho đến khi vàng giòn cả 2 mặt. Sau đó vớt bánh ra để lên giấy thấm dầu cho ráo dầu.\nBước 6: Pha nước mắmCho vào tô 50ml nước lọc, sau đó cho thêm 2 muỗng canh đường, 1 muỗng cà phê bột ngọt, 1/2 muỗng cà phê tiêu khuấy đều để gia vị tan, rồi cho tiếp 2 muỗng canh giấm ăn, 2 muỗng canh nước mắm, 1 muỗng canh tỏi băm, 1/2 muỗng cà phê ớt băm vào và khuấy đều.Bạn nêm nếm lại cho vừa khẩu vị rồi múc nước chấm ra chén, cho thêm cà rốt, su hào vào là bạn đã có 1 chén nước chấm chua ngọt rồi.';
+  String quanngon = 'Bánh tôm Hàng Bồ: 55 Hàng Bồ, Hoàn Kiếm\nBánh tôm Hồ Tây: số 1 Thanh Niên, Tây Hồ\nBánh tôm Cô Ầm: ngõ Đồng Xuân, Hàng Chiếu, Hoàn Kiếm';
+  String content = 'Du lịch Hà Nội mà chưa thưởng thức đặc sản lòng rán thì quả thật là thiệt thòi lớn đối với thực thần chân chính. Miếng lòng sạch được rán chín cháy cạnh, ngoài giòn trong mềm, ăn cùng với rau thơm, bún tươi, chấm thêm mắm tôm chua cay thì phải nói là “bùng nổ hương vị”.  có thể thử lòng xài, lòng hấp, gỏi lòng…; đều là “cực phẩm” đấy!';
   late PageController pageController;
   // List<Widget> inf = [
   //   Thongtin(),
@@ -92,7 +92,7 @@ class _BunChaPageState extends State<BunChaPage> {
                             borderRadius: BorderRadius.circular(25),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/buncha.jpg'
+                              image: AssetImage('assets/banhtom.jpg'
                               ),
                               )
                           ),

@@ -1,5 +1,8 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:hnfood/UI/Screen/login.dart';
+
+import 'Widget/Monan/Listmonanyeuthich.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key, required this.title});
@@ -103,7 +106,7 @@ class _AccountPageState extends State<AccountPage> {
                         // ),
                       ),
                     ),
-                    Text('Phúc',
+                    Text('phuc1357',
                     style: TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
@@ -113,7 +116,9 @@ class _AccountPageState extends State<AccountPage> {
                     Padding(padding: EdgeInsets.all(25)),
                     Container(
                       width: MediaQuery.of(context).size.width -15,
-                      child: ElevatedButton.icon(onPressed: (){},
+                      child: ElevatedButton.icon(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => FoodLovePage(title: '',)));
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(kbackgroundAppbar)
                       ),
@@ -122,7 +127,9 @@ class _AccountPageState extends State<AccountPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Container(
                       width: MediaQuery.of(context).size.width -15,
-                      child: ElevatedButton.icon(onPressed: (){},
+                      child: ElevatedButton.icon(onPressed: (){
+                        
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(kbackgroundAppbar)
                       ),
@@ -131,7 +138,9 @@ class _AccountPageState extends State<AccountPage> {
                       Padding(padding: EdgeInsets.all(8)),
                       Container(
                       width: MediaQuery.of(context).size.width -15,
-                      child: ElevatedButton.icon(onPressed: (){},
+                      child: ElevatedButton.icon(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(title: '',)));
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStatePropertyAll(kbackgroundAppbar)
                       ),

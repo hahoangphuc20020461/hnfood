@@ -5,39 +5,39 @@ import 'package:comment_box/comment/comment.dart';
 import 'package:comment_box/comment/test.dart';
 import 'package:comment_box/main.dart';
 
-class CommentTourPage extends StatefulWidget {
-  const CommentTourPage({super.key, required this.title});
+class HPCommentTourPage extends StatefulWidget {
+  const HPCommentTourPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<CommentTourPage> createState() => _CommentTourPageState();
+  State<HPCommentTourPage> createState() => _HPCommentTourPageState();
 }
 
-class _CommentTourPageState extends State<CommentTourPage> {
+class _HPCommentTourPageState extends State<HPCommentTourPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   final formKey = GlobalKey<FormState>();
   final TextEditingController commentController = TextEditingController();
   List filedata = [
     {
-      'name': 'Chuks Okwuenu',
+      'name': 'ChuksOkwuenu',
       'pic': 'assets/logofood.png',
       'message': 'Tour đi mỏi chân quá',
       
     },
     {
-      'name': 'Biggi Man',
+      'name': 'BiggiMan',
       'pic': 'assets/logofood.png',
       'message': 'Tour này nhiều món ngon',
       
     },
-    // {
-    //   'name': 'Tunde Martins',
-    //   'pic': 'assets/logofood.png',
-    //   'message': 'Very cool',
+    {
+      'name': 'TundeMartins',
+      'pic': 'assets/logofood.png',
+      'message': 'HP Tour rất đáng thử',
       
-    // },
+    },
     // {
     //   'name': 'Biggi Man',
     //   'pic': 'assets/logofood.png',
@@ -127,7 +127,7 @@ class _CommentTourPageState extends State<CommentTourPage> {
         body: Container(
         child: CommentBox(
           userImage: CommentBox.commentImageParser(
-              imageURLorPath: "assets/36foodtour.jpg"),
+              imageURLorPath: "assets/hpfoodtour.png"),
           child: commentChild(filedata),
           labelText: 'Hãy viết bình luận...',
           errorText: 'Comment không được để trống',

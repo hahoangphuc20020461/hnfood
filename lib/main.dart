@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'UI/Screen/Widget/Foodtour/CommentTour_screen.dart';
+import 'UI/Screen/Widget/Foodtour/Tour/36Tour_screen.dart';
 import 'UI/Screen/Widget/Foodtour/Tour/Hpfoodtour.dart';
 import 'UI/Screen/Widget/Foodtour/RateTour_screen.dart';
 import 'UI/Screen/Widget/Monan/Banhdacua_screen.dart';
@@ -15,6 +16,7 @@ import 'UI/Screen/Widget/comment_screen.dart';
 import 'UI/Screen/account_screen.dart';
 import 'UI/Screen/home_screen.dart';
 import 'UI/Screen/login.dart';
+import 'UI/intro.dart';
 
 void main() async {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BanhDaCuaPage(title: '')//const IntroPage(title: 'Flutter Demo Home Page'),
+      home: const IntroPage(title: 'Flutter Demo Home Page'),
     );
   }
 }

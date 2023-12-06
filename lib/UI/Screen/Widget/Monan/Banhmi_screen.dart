@@ -4,23 +4,23 @@ import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
 import '../comment_screen.dart';
 
-class BunChaPage extends StatefulWidget {
-  const BunChaPage({super.key, required this.title});
+class BanhmiPage extends StatefulWidget {
+  const BanhmiPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<BunChaPage> createState() => _BunChaPageState();
+  State<BanhmiPage> createState() => _BanhmiPageState();
 }
 
-class _BunChaPageState extends State<BunChaPage> {
+class _BanhmiPageState extends State<BanhmiPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
-  String thongtin = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
-  String congthuc = 'Nguyên liệu:\n Thịt ba chỉ 500 gr\nThịt nạc vai 500 gr\nSả 5 cây\nHành tím 4 củ\nChanh 1 trái\nCà rốt 1 củ\nRau 100 gr\nHạt nêm 4 muỗng cà phê\nĐường trắng 2 muỗng canh\nBột ngọt 3 muỗng cà phê\nNước màu 1 muỗng canh\nNước mắm 3 muỗng canh\nGiấm 1 muỗng cà phê\nỚt 2 trái\n \nCách làm:\nBước 1:\nThịt mua về bạn rửa sạch với muối, sau đó thái thịt ba chỉ thành những miếng mỏng to bản. Còn phần thịt nạc vai thì đem xay hoặc băm nhuyễn.\nBước 2:\nSả lột bớt lớp vỏ cứng bên ngoài, thái khoanh. Xay nhuyễn sả. Sau đó vắt sả để lấy nước. Xay nhuyễn hành khô và tỏi.\nBước 3:\nƯớp thịt theo tỷ lệ: 1 kg thịt : 3 thìa cà phê hạt nêm : 3 thìa đường : 3 thìa bột ngọt. Thêm vào 1 thìa canh nước hàng (nước màu), 1 thìa canh nước mắm. Phần gia vị ở trên bạn chia làm 2 phần, hành tỏi xay nhuyễn và nước sả. Một phần bạn ướp với thịt xay nhuyễn. Phần còn lai ướp với thịt cắt miếng. Nếu có thời gian thì nên ướp gia vị trước một đêm, để trong tủ lạnh thì thịt sẽ thấm rất ngon.\nBước 4:\nBào vỏ cà rốt và đu đủ rồi cho vào ngâm với nước muối đã pha loãng. Tiếp đó, cắt đu đủ và cà rốt thành những miếng mỏng. Tiếp theo bạn cho 1/2 muỗng canh đường, 1 muỗng cà phê giấm, 1 muỗng cà phê hạt nêm, chanh, ớt vào trộn đều với đu đủ cà rốt, nếm có vị chua ngọt vừa miệng.\nBước 5:\nLần lượt xếp thịt đã ướp gia vị lên vỉ nướng. Viên thịt băm thành những viên nhỏ vừa ăn. Các bạn có thể nướng bằng lò hoặc bằng than, nhưng ngon nhất vẫn là nướng trên bếp than hoa. Trong quá trình nướng nhớ phết dầu ăn lên mặt thịt để thịt không bị khô.\nBước 6:\nCho nước chấm đã pha vào nồi đun ấm. Rửa sạch các loại rau sống. Dọn bún, rau ra dĩa, cho chả, dưa đu đủ cà rốt vào nước chấm và thưởng thức.';
-  String quanngon = 'Bún chả Cửa Đông: 41 Cửa Đông, Q.Hoàn Kiếm\nBún chả Đắc Kim: 1 Hàng Mành, Q.Hoàn Kiếm\nBún chả Sinh Từ: 57 Nguyễn Khuyến, Q.Đống Đa';
-  String content = 'Thoạt nhìn, bạn có thể nghĩ ngay đến món bún thịt nướng trong Nam, nhưng không nhé, hương vị nước chấm của bún chả Hà Nội hoàn toàn khác biệt. Một phần bún chả gồm: bún, nước chấm vị chua ngọt có kèm su hào và cà rốt ngâm giấm, thêm vài miếng chả thịt nướng thơm phức dậy mùi than lửa và hạt tiêu. Khi ăn, dùng kèm rau sống, mỗi thứ một chút hòa quyện cùng nhau tạo nên vị đậm đà, ngon khó cưỡng.';
+  String thongtin = 'Thời tiết lành lạnh tại Hà Nội là lúc tuyệt nhất để bạn thưởng thức món bánh mì sốt vang. Bánh mì nướng vàng giòn chấm cùng sốt vang đậm đà cùng thịt bò mềm. Món ăn sáng nhẹ nhàng, vừa đủ no để bạn bắt đầu một ngày mới là đây chứ đâu. ';
+  String congthuc = 'Nguyên Liệu: \n 500gr thịt bò\n2 củ cà rốt\n1 củ hành tây \n5 trái cà chua\n2 củ khoai tây \n5gr ngò rí\n1 củ tỏi\n150ml rượu vang\nGia vị cần thiết: hạt nêm, đường, muối, tiêu, bột năng, bột quế...\n \nCách làm:\nBước 1:\nĐầu tiên của cách làm bánh mì sốt vang, chúng mình cần sơ chế các nguyên liệu trước nha.Đối với bò, các bạn chọn những phần bò tươi, đỏ tươi, không hôi, có độ đàn hồi. Khi mua về, các bạn rửa sơ với 1 lần nước, sau đó chà lên 1 muối để rồi rửa lại với nước 3 phút thì xong. Một cách khác, các bạn có thể cho bò vào nồi luộc sơ với nước, vài lát gừng tầm 2-4 phút thì mùi hôi của bò sẽ giảm đi đáng kể luôn nè. Sau đó các bạn cắt bò ra thành những khúc sao cho vừa miệng ăn nha, tránh cắt thịt quá vụn vì khi nấu thịt sẽ bị rút nhỏ lại đó.\nBước 2:\nVì món bánh mì sốt vang này có khá nhiều thành phần phụ từ rau củ quả: hành tây, cà rốt, khoai tây, cà chua, ngò rí... Các bạn chỉ cần rửa sạch rồi cắt nhỏ là được.\nTrừ cà chua khi rửa xong, các bạn ngâm cà chua trong thau nước đá lạnh để dễ lột vỏ cà hơn, sau đó đem cà đi xay để lấy sốt, hoặc đâm nhỏ đều được.\nTỏi các bạn sử dụng tỏi băm nha, cà rốt và khoai tây khi rửa xong các bạn đem ngâm với nước đá lạnh 5 phút rồi vớt ra nhé.\nBước 3:Cho thịt bò các bạn mới rửa sạch vào 1 tô lớn, rồi ướp thịt với 1 muỗng rượu vang, 1 muỗng bột quế, 1 muỗng hạt nêm, 1 ít tỏi rồi dùng muỗng trộn đều thịt lên, các bạn cũng có thể sử dụng bao tay nilon để trộn thịt dễ thấm hơn nha. Đậy kín phần thịt ướp lại rồi để nguyên ướp thịt trong khoảng 15-20 phút là xong.\nBước 4:\nSau khi thịt đã ướp hoàn tất, các bạn sẽ xào sơ thịt với 1 chảo nhỏ và 1 ít dầu và tỏi, xào cho đến khi thịt ngả nâu thì tắt bếp nha. Các bạn nên thao tác bước này nhanh 1 chút để thịt không bị quá lửa dẫn đến dai và khét nha.\nBước 5: \nDùng 1 nồi lớn, cho tỏi và dầu vào phi thơm vàng. Tiếp theo các bạn cho cà chua đã xay mịn vào xào nhẹ, cho thêm 100ml rượu vang và nấu ở lửa nhỏ, khi sốt sôi lên các bạn cho thêm 1 ít muối là được. Kế tiếp, các bạn mới cho thêm thịt đã xào chín, đổ vào 1 lít nước để hầm bò cho thật mềm, các bạn để lửa trung bình nhỏ để bò đạt chất lượng tốt nhất nha. Tầm 20 phút sau các bạn cho thêm khoai tây, cà rốt, nêm thêm 1 ít hạt nêm, muối và đừng quên bỏ thêm 2 muỗng đường cho đậm đà nhé. Tiếp tục hầm trong vòng 20 phút đồng hồ nữa. Cuối cùng là cho hành tây và nêm nếm gia vị lại thêm 1 lần nữa là được. Để làm cho sốt hấp dẫn hơn các bạn pha 2 muỗng bột năng với 2 muỗng nước rồi đổ vào nồi nước sốt vang khuấy đều cho đến khi hỗn hợp sệt nhẹ là được.';
+  String quanngon = 'Beefsteak Sauce Bread Shop: ngõ 35 Thái Thịnh, ngã Tư Sở, Đống Đa\nTiệm số 252 Hàng Bông, Cửa Nam, Hoàn Kiếm\nTrâm – Bánh mì sốt vang Đình Ngang: 30 Đình Ngang, quận Hoàn Kiếm';
+  String content = 'Thời tiết lành lạnh tại Hà Nội là lúc tuyệt nhất để bạn thưởng thức món bánh mì sốt vang. Bánh mì nướng vàng giòn chấm cùng sốt vang đậm đà cùng thịt bò mềm. Món ăn sáng nhẹ nhàng, vừa đủ no để bạn bắt đầu một ngày mới là đây chứ đâu. ';
   late PageController pageController;
   // List<Widget> inf = [
   //   Thongtin(),
@@ -92,7 +92,7 @@ class _BunChaPageState extends State<BunChaPage> {
                             borderRadius: BorderRadius.circular(25),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/buncha.jpg'
+                              image: AssetImage('assets/banhmihanoi.jpg'
                               ),
                               )
                           ),
