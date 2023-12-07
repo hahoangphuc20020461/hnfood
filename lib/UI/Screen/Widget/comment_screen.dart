@@ -131,7 +131,7 @@ class _CommentPageState extends State<CommentPage> {
         body: Container(
         child: CommentBox(
           userImage: CommentBox.commentImageParser(
-              imageURLorPath: "assets/logofood.png"),
+              imageURLorPath: "assets/avatar-icon-images-4.jpg"),
           child: commentChild(filedata),
           labelText: 'Write a comment...',
           errorText: 'Comment cannot be blank',
@@ -143,7 +143,7 @@ class _CommentPageState extends State<CommentPage> {
                 var value = {
                   'name': 'New User',
                   'pic':
-                      'assets/logofood.png',
+                      'assets/avatar-icon-images-4.jpg',
                   'message': commentController.text,
                   //'star': '4 sao'
                 };

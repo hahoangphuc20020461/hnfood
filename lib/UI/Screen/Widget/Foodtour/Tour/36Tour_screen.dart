@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hnfood/UI/Screen/Widget/Foodtour/CommentTour_screen.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
 import '../RateTour/Rate36Tour_screen.dart';
@@ -57,12 +58,18 @@ class _basauFoodTourPageState extends State<basauFoodTourPage> {
                   )
                   ),
                 ),
+                 Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, icon: Icon(Icons.arrow_back,color: kbackgroundColor,)),
+                ),
                 Column(
                   children: [
                     Container(
                       margin: EdgeInsets.only(top: 90),
                       child: Center(
-                        child: Image.asset('assets/hpfoodtour.png',
+                        child: Image.asset('assets/36foodtour.jpg',
                         width: 271,
                         height: 148,
                         ),
@@ -200,7 +207,7 @@ class _basauFoodTourPageState extends State<basauFoodTourPage> {
                       Row(
                         children: [
                           ElevatedButton.icon(onPressed: (){
-                           
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => CommentTourPage(title: '',)));
                           }, icon: Icon(Icons.comment), label: Text('Bình Luận Tour', style: TextStyle(color: kbackgroundAppbar))),
                           Padding(padding: EdgeInsets.all(8)),
                       ElevatedButton.icon(onPressed: (){

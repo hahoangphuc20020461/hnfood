@@ -55,12 +55,18 @@ class _LocoFoodTourPageState extends State<LocoFoodTourPage> {
                   )
                   ),
                 ),
+                 Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, icon: Icon(Icons.arrow_back,color: kbackgroundColor,)),
+                ),
                 Column(
                   children: [
                     Container(
                       margin: EdgeInsets.only(top: 90),
                       child: Center(
-                        child: Image.asset('assets/hpfoodtour.png',
+                        child: Image.asset('assets/locofoodtour.jpg',
                         width: 271,
                         height: 148,
                         ),

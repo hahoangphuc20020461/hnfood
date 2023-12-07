@@ -92,7 +92,7 @@ class _AccountPageState extends State<AccountPage> {
                         margin: EdgeInsets.only(top: 90),
                         child: CircularProfileAvatar(
                     '',
-                    child: Image.asset('assets/avt.png'),
+                    child: Image.asset('assets/avatar-icon-images-4.jpg'),
                     //borderColor: Colors.purpleAccent,
                     borderWidth: 5,
                     elevation: 2,

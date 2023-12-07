@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
 import 'package:hnfood/UI/Screen/Widget/signup.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter_login/flutter_login.dart';
@@ -25,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
   Duration get loginTime => Duration(milliseconds: 2250);
+  PageController controller = PageController();
 
   Future<String?> _authUser(LoginData data) {
     debugPrint('Name: ${data.name}, Password: ${data.password}');
@@ -57,11 +62,20 @@ class _LoginPageState extends State<LoginPage> {
 
   TextEditingController userNameController = TextEditingController();
   TextEditingController passController =TextEditingController();
-
+  Timer? _timer;
+  late double _progress;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    controller.initialPage;
+    // EasyLoading.addStatusCallback((status) {
+    //   print('EasyLoading Status $status');
+    //   if (status == EasyLoadingStatus.dismiss) {
+    //     _timer?.cancel();
+    //   }
+    // });
+    // EasyLoading.showSuccess('Use in initState');
   }
 
   @override
@@ -137,7 +151,13 @@ class _LoginPageState extends State<LoginPage> {
                             Container(
                       width: MediaQuery.of(context).size.width/2 -15,
                       child: ElevatedButton.icon(onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(title: '',)));
+                        //_timer?.cancel();
+                        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => HomePage(title: '')), (route) => false);
+                        Future.delayed(Duration(milliseconds: 2200),() {
+
+                        });
+                        //RxStatus.loading();
+                            //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(title: '',)));
                       },
                       style: ButtonStyle(
                             backgroundColor: MaterialStatePropertyAll(kbackgroundColor)
@@ -208,4 +228,21 @@ Widget _inputField(String hinttext, TextEditingController textEditingController,
     ),
     obscureText: isPassword,
   );
+}
+
+void configLoading() {
+  EasyLoading.instance
+    ..displayDuration = const Duration(milliseconds: 2000)
+    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
+    ..loadingStyle = EasyLoadingStyle.dark
+    ..indicatorSize = 45.0
+    ..radius = 10.0
+    ..progressColor = Colors.yellow
+    ..backgroundColor = Colors.green
+    ..indicatorColor = Colors.yellow
+    ..textColor = Colors.yellow
+    ..maskColor = Colors.blue.withOpacity(0.5)
+    ..userInteractions = true
+    ..dismissOnTap = false;
+    //..customAnimation = CustomAnimation();
 }

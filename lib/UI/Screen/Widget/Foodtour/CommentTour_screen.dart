@@ -92,6 +92,9 @@ class _CommentTourPageState extends State<CommentTourPage> {
       appBar: AppBar(
         backgroundColor: kbackgroundAppbar,
         title: Text('Bình luận',
+        style: TextStyle(
+          color: kbackgroundColor
+        ),
         ),
         centerTitle: true,
       ),
@@ -139,7 +142,7 @@ class _CommentTourPageState extends State<CommentTourPage> {
                 var value = {
                   'name': 'New User',
                   'pic':
-                      'assets/logofood.png',
+                      'assets/36foodtour.jpg',
                   'message': commentController.text,
                   //'star': '4 sao'
                 };
@@ -158,87 +161,7 @@ class _CommentTourPageState extends State<CommentTourPage> {
           sendWidget: Icon(Icons.send_sharp, size: 30, color: Colors.white),
         ),
       ),
-        //SingleChildScrollView(
-         // child: 
-          // Column(
-          //   children: [
-          //     Padding(
-          //     padding: EdgeInsets.all(8),
-          //     child: Column(
-          //       crossAxisAlignment: CrossAxisAlignment.start,
-          //       children: [
-          //         Row(
-          //           children: [
-          //             Text('Bình Luận',
-          //             style: TextStyle(
-          //               fontWeight: FontWeight.bold,
-          //               fontSize: 30
-          //             ),),
-          //             Container(
-          //               margin: EdgeInsets.only(right: 1),
-          //             ),
-          //             ElevatedButton.icon(onPressed: (){}, icon: Icon(Icons.comment), label: Text('Thêm Bình Luận'))
-          //           ],
-          //         ),
-          //         // Padding(
-          //         //   padding: EdgeInsets.only(bottom: 10),
-          //         //   child: Text("Gợi ý", style: TextStyle(
-          //         //     color: Colors.brown,
-          //         //     fontWeight: FontWeight.bold,
-          //         //     fontSize: 14
-          //         //   ),
-          //         //   ),
-          //         //   ),
-          //           SizedBox(
-          //             width: double.infinity,
-          //             height: 600,//MediaQuery.of(context).size.height,
-          //             child: ListView.builder(
-          //               itemCount: 10,
-          //               scrollDirection: Axis.vertical,
-          //               itemBuilder: (BuildContext context, int index) {
-          //               return Padding(padding: EdgeInsets.only(left: 10, right: 10),
-          //               child: CardList(),
-          //               );
-          //             },
-          //             ),
-          //           )
-          //       ],
-          //     ),
-          //       ),
-          //       Container(padding: EdgeInsets.all(10),),
-          //       // Padding(
-          //       // padding: EdgeInsets.all(8),
-          //       // child: Column(
-          //       //   crossAxisAlignment: CrossAxisAlignment.start,
-          //       //   children: [
-          //       //     Padding(
-          //       //       padding: EdgeInsets.only(bottom: 10),
-          //       //       child: Text("Gợi ý", style: TextStyle(
-          //       //         color: Colors.brown,
-          //       //         fontWeight: FontWeight.bold,
-          //       //         fontSize: 14
-          //       //       ),
-          //       //       ),
-          //       //       ),
-          //       //       SizedBox(
-          //       //         width: double.infinity,
-          //       //         height: 200,
-          //       //         child: ListView.builder(
-          //       //           itemCount: 10,
-          //       //           scrollDirection: Axis.horizontal,
-          //       //           itemBuilder: (BuildContext context, int index) {
-          //       //           return Padding(padding: EdgeInsets.only(left: 10, right: 10),
-          //       //           child: CardList(),
-          //       //           );
-          //       //         },
-          //       //         ),
-          //       //       )
-          //       //   ],
-          //       // ),
-          //       //   ),
-          //   ],
-          // ),
-        //)
+        
         );
   }
 }

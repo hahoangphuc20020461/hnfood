@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hnfood/UI/Screen/Widget/Rate/banhmirate.dart';
 import 'package:hnfood/UI/Screen/Widget/Rate/rating_screen.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
@@ -82,6 +83,12 @@ class _BanhmiPageState extends State<BanhmiPage> {
                     bottomRight: Radius.circular(25)
                   )
                   ),
+                ),
+                 Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, icon: Icon(Icons.arrow_back,color: kbackgroundColor,)),
                 ),
                 Center(
                   child: Container(
@@ -178,7 +185,7 @@ class _BanhmiPageState extends State<BanhmiPage> {
                         }, icon: Icon(Icons.comment), label: Text('Bình Luận', style: TextStyle(color: kbackgroundAppbar))),
                         Padding(padding: EdgeInsets.all(15)),
                         ElevatedButton.icon(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => RatingPage(title: '',)));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => BanhmiRatingPage(title: '',)));
                         }, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá', style: TextStyle(color: kbackgroundAppbar))),
                       ],
                     ),

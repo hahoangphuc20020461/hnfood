@@ -71,6 +71,12 @@ class _BaSauRatingTourPageState extends State<BaSauRatingTourPage> {
                   )
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, icon: Icon(Icons.arrow_back,color: kbackgroundColor,)),
+                ),
                 Column(
                   children: [
                     Center(

@@ -19,9 +19,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
+  
 
   @override
   void initState() {
+    
     // TODO: implement initState
     super.initState();
     pageController = PageController();

@@ -41,10 +41,23 @@ class _HomeCTPageState extends State<HomeCTPage> {
   List<double> saoDuocuathic = [3, 5, 4.5, 4];
   List<Widget> scrDuocuathic = [BanhtomPage(title: ''), BunRieuCuaPage(title: ''), BunRieuCuaPage(title: ''), BanhDaCuaPage(title: '')];
   
+   bool? _isLoading;
   @override
   void initState() {
+    _isLoading = true;
+    Future.delayed(Duration(seconds: 4), () {
+      setState(() {
+        _isLoading = false;
+      });
+    });
     // TODO: implement initState
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
   }
 
   @override

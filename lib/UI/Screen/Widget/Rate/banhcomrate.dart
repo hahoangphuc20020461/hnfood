@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class RatingPage extends StatefulWidget {
-  const RatingPage({super.key, required this.title});
+class BanhcomRatingPage extends StatefulWidget {
+  const BanhcomRatingPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<RatingPage> createState() => _RatingPageState();
+  State<BanhcomRatingPage> createState() => _BanhcomRatingPageState();
 }
 
-class _RatingPageState extends State<RatingPage> {
+class _BanhcomRatingPageState extends State<BanhcomRatingPage> {
   static const Color kbackgroundColor = Color(0xFFf1f1f1);
   static const Color kbackgroundAppbar = Color.fromARGB(255, 123, 51, 25);
   bool isclick = false;
@@ -87,7 +87,7 @@ class _RatingPageState extends State<RatingPage> {
                           shape: BoxShape.circle,
                           image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage('assets/chaosuon.jpg'
+                            image: AssetImage('assets/banhcomhn.jpg'
                             ),
                             )
                         ),
@@ -101,7 +101,7 @@ class _RatingPageState extends State<RatingPage> {
                       ),
                     ),
                     Padding(padding: EdgeInsets.all(8)),
-                    Text('Cháo sườn',
+                    Text('Bánh cốm',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 23,

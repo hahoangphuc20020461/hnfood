@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hnfood/UI/Screen/Widget/Rate/banhcomrate.dart';
 import 'package:hnfood/UI/Screen/Widget/Rate/rating_screen.dart';
 import 'package:scrollable_text_indicator/scrollable_text_indicator.dart';
 
@@ -83,6 +84,12 @@ class _BanhcomPageState extends State<BanhcomPage> {
                   )
                   ),
                 ),
+                 Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  }, icon: Icon(Icons.arrow_back,color: kbackgroundColor,)),
+                ),
                 Center(
                   child: Container(
                     width: 271,
@@ -92,7 +99,7 @@ class _BanhcomPageState extends State<BanhcomPage> {
                             borderRadius: BorderRadius.circular(25),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets\banhcomhn.jpg'
+                              image: AssetImage('assets/banhcomhn.jpg'
                               ),
                               )
                           ),
@@ -178,7 +185,7 @@ class _BanhcomPageState extends State<BanhcomPage> {
                         }, icon: Icon(Icons.comment), label: Text('Bình Luận', style: TextStyle(color: kbackgroundAppbar))),
                         Padding(padding: EdgeInsets.all(15)),
                         ElevatedButton.icon(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => RatingPage(title: '',)));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => BanhcomRatingPage(title: '',)));
                         }, icon: Icon(Icons.star, color: Colors.amber,), label: Text('Đánh giá', style: TextStyle(color: kbackgroundAppbar))),
                       ],
                     ),

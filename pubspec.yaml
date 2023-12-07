@@ -46,6 +46,7 @@ dependencies:
   circular_profile_avatar: ^2.0.5
   material_design_icons_flutter: ^7.0.7296
   flutter_login: ^4.2.1
+  flutter_easyloading: ^3.0.5
 
 dev_dependencies:
   flutter_test:

@@ -92,6 +92,9 @@ class _HPCommentTourPageState extends State<HPCommentTourPage> {
       appBar: AppBar(
         backgroundColor: kbackgroundAppbar,
         title: Text('Bình luận',
+        style: TextStyle(
+          color: kbackgroundColor
+        ),
         ),
         centerTitle: true,
       ),
